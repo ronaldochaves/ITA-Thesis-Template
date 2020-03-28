@@ -202,23 +202,25 @@
 }
 
 %==============================================================================
-%%% Novos comandos: \author, \authoraddress, \advisor, \coadvisor,
+%%% Novos comandos: \author, \authorAddress, \advisor, \coadvisor,
 %%% \boss, etc ...  ;-)
 %==============================================================================
-% Autor...
-\renewcommand{\author}[3]{%               % Nome, Sobrenome, Gênero
+% Autor
+\renewcommand{\author}[3]{               % Nome, Sobrenome e Gênero
   \gdef\@authorFirst{#1}
   \gdef\@authorLast{#2}
   \gdef\@authorGender{#3}
 }
+
 % Endereco do Autor (utilizado no verso da folha de rosto)
-\renewcommand{\authorAddress}[4]{%
+\renewcommand{\authorAddress}[4]{        % Rua, CEP, Cidade e Estado
   \gdef\@authorStreet{#1}
   \gdef\@authorZIP{#2}
   \gdef\@authorCity{#3}
   \gdef\@authorState{#4}
 }
-% Orientador...
+
+% Orientador
 \newcommand{\advisor}[4][\itaadvisorwordbabel]{     % [word] ,title, name
   \renewcommand{\itaadvisorname}{#3}
   \renewcommand{\itaadvisortitle}{#2}
@@ -228,7 +230,7 @@
   \gdef\@advisor{#2~#3 \\ #1}
   \gdef\itaadvisorwordbabelll{#1}
 }
-% Coorientador...  (opcional)
+% Coorientador (opcional)
 \newcommand{\coadvisor}[4][\itacoadvisorwordbabel]{%
   \gdef\@itacoadvisorname{#3}
   \gdef\@itacoadvisortitle{#2}
@@ -237,7 +239,7 @@
   \gdef\@coadvisor{#2~#3 \\ #1}
   \gdef\itacoadvisorwordbabelll{#1}
 }
-% Pro-Reitor de Pos-Graduacao e Pesquisa...
+% Pro-Reitor de Pos-Graduacao e Pesquisa
 \newcommand{\boss}[3][\itabosswordbabel]{      %[word] ,title, name
   \renewcommand{\itabossname}{#3}
   \renewcommand{\itabosstitle}{#2}

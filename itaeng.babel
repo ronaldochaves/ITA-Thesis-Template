@@ -126,7 +126,7 @@
 \gdef\bossgendermfbabel{mf}                               					 % masc ou fem
 \gdef\bosscoursegendermfbabel{mf}                         					 % masc ou fem
 
-\gdef\finalpaperbabel{Final Paper}																 % Trabalho de Graduação
+\gdef\finalpaperbabel{Final Paper}											 % Trabalho de Graduação
 \gdef\itatglevelbabel{Final paper (Undergraduation study)}				 % Final paper (Undergraduation study)
 
 %--------------------------------------------------------
