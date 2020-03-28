@@ -200,7 +200,6 @@
         \gdef\@publmonth{#2}
         \gdef\@publyear{#3}
 }
-\date{\dayname}{\monthname}{\number\year}
 
 %==============================================================================
 %%% Novos comandos: \author, \authoraddress, \advisor, \coadvisor,
@@ -208,15 +207,16 @@
 %==============================================================================
 % Autor...
 \renewcommand{\author}[3]{%               % Nome, Sobrenome, Gênero
-  \gdef\@authorfirst{#1}
-  \gdef\@authorlast{#2}
-  \gdef\@authorgender{#3}
+  \gdef\@authorFirst{#1}
+  \gdef\@authorLast{#2}
+  \gdef\@authorGender{#3}
 }
 % Endereco do Autor (utilizado no verso da folha de rosto)
-\renewcommand{\itaauthoraddress}[3]{%
-  \gdef\@itaauthoraddress{#1}
-  \gdef\@itaauthorcep{#2}
-  \gdef\@itaauthorcity{#3}
+\renewcommand{\authorAddress}[4]{%
+  \gdef\@authorStreet{#1}
+  \gdef\@authorZIP{#2}
+  \gdef\@authorCity{#3}
+  \gdef\@authorState{#4}
 }
 % Orientador...
 \newcommand{\advisor}[4][\itaadvisorwordbabel]{     % [word] ,title, name
@@ -333,7 +333,7 @@
 	 \else
 			por\\
 	 \fi
-   \itaformatauthorname{\@authorfirst\ \@authorlast}
+   \itaformatauthorname{\@authorFirst\ \@authorLast}
 
    \vfill
 
@@ -383,7 +383,7 @@
 
    \center
 
-   \itaformatauthorname{\@authorfirst\ \@authorlast}
+   \itaformatauthorname{\@authorFirst\ \@authorLast}
    \vfill
 
    \vspace*{\stretch{1}}
@@ -445,7 +445,7 @@
 
    \center
 
-   \itaformatauthorname{\@authorfirst\ \@authorlast}
+   \itaformatauthorname{\@authorFirst\ \@authorLast}
    \vfill
 
    \vspace*{\stretch{1}}
@@ -518,7 +518,7 @@
 
 	\vspace*{\stretch{2}}
 
-  \itaformatauthorname{\@authorfirst\ \@authorlast}
+  \itaformatauthorname{\@authorFirst\ \@authorLast}
 	
 	\vspace*{\stretch{1}}
 	
@@ -575,8 +575,8 @@
 		\begin{footnotesize}
  		   \begin{onehalfspacing}
  		    \setlength{\baselineskip}{0.7\baselineskip}
-		    \noindent\@authorlast, \@authorfirst\par
-                    \@title\ / \@authorfirst\ \@authorlast.\\
+		    \noindent\@authorLast, \@authorFirst\par
+                    \@title\ / \@authorFirst\ \@authorLast.\\
                     \noindent São José dos Campos, \@publyear.\par
                     \NumPenultimaPagina f.\par
 		    \vspace{\baselineskip}
@@ -600,7 +600,7 @@
           \textbf{\itarefbibnamecipbabel} \par
 			\begin{onehalfspacing}
           {\setlength{\baselineskip}{0.7\baselineskip}
-          \MakeUppercase{\@authorlast}, \@authorfirst. \textbf{\@title}. \@publyear.                     \NumPenultimaPagina f. \ifthenelse{\equal{\itaoptionlevel}{tg}}{\itaciptg2babel}{\itacip2babel} \\}
+          \MakeUppercase{\@authorLast}, \@authorFirst. \textbf{\@title}. \@publyear.                     \NumPenultimaPagina f. \ifthenelse{\equal{\itaoptionlevel}{tg}}{\itaciptg2babel}{\itacip2babel} \\}
        \end{onehalfspacing}
 }
 % Cessao de Direitos
@@ -610,7 +610,7 @@
        \vspace*{\stretch{4}}
        {\normalsize\textbf{\itacedirnamebabel}} \par
        {\setlength{\baselineskip}{0.7\baselineskip}
-       {\footnotesize \itacipauthorname} {\normalsize \@authorfirst\ \@authorlast} \\
+       {\footnotesize \itacipauthorname} {\normalsize \@authorFirst\ \@authorLast} \\
        {\footnotesize \itacipworktitlebabel} {\normalsize \@title.} \\
        {\footnotesize \itacipworktype} {\normalsize\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itatglevel}{\itaworklevel} / \@publyear} \\ }
 
@@ -621,9 +621,9 @@
        \vspace*{\stretch{2}}
        \rule{75mm}{0.2mm}\\
        {\normalsize\setlength{\baselineskip}{0.7\baselineskip}
-           \@authorfirst\ \@authorlast\\
-	   \@itaauthoraddress\\
-	   \@itaauthorcep\ -- \@itaauthorcity\\}
+           \@authorFirst\ \@authorLast\\
+	   \@authorStreet\\
+	   \@authorZIP\ -- \@authorCity\ -- \@authorState\\}
 	   \end{onehalfspacing}
 }
 
@@ -649,9 +649,9 @@
 			 		 
 			 	 \hspace{3cm}\hrulefill\hspace{3cm}
 				 \par 
-				 \small{\@authorfirst\ \@authorlast
+				 \small{\@authorFirst\ \@authorLast
 				 \par
-				 \ifthenelse{\equal{\@authorgender}{masc}}{}{\if@eng \else a\fi}}
+				 \ifthenelse{\equal{\@authorGender}{masc}}{}{\if@eng \else a\fi}}
 				 \vspace*{\stretch{1}}
 			 		 
 			 	 \hspace{3cm}\hrulefill\hspace{3cm}
@@ -690,7 +690,7 @@
        \begin{center}
          \itaformatworktitle{\MakeUppercase{\@title}}
          \vfill
-         \itaformatauthorname{\@authorfirst\ \@authorlast}
+         \itaformatauthorname{\@authorFirst\ \@authorLast}
 				 \vfill
 			 \end{center}
 			
@@ -1261,14 +1261,14 @@
 	\multicolumn{ 4}{|p{17cm}|}{$^{5.}$ \scriptsize TÍTULO E SUBTÍTULO:} \\
 	\multicolumn{ 4}{|l|}{\nh{\parbox[b]{.95\textwidth}{\@title}}} \\[\esp]
 	\hline
-	\multicolumn{ 4}{|l|}{$^{6.}$ \scriptsize AUTOR\ifthenelse{\equal{\@authorgender}{masc}}{}{A}(ES):} \\
-	\multicolumn{ 4}{|l|}{\textbf{\@authorfirst\ \@authorlast}} \\[\esp]
+	\multicolumn{ 4}{|l|}{$^{6.}$ \scriptsize AUTOR\ifthenelse{\equal{\@authorGender}{masc}}{}{A}(ES):} \\
+	\multicolumn{ 4}{|l|}{\textbf{\@authorFirst\ \@authorLast}} \\[\esp]
 	\hline
 	\multicolumn{ 4}{|l|}{$^{7.}$ \scriptsize INSTITUIÇÃO(ÕES)/ÓRGÃO(S) 
 	    INTERNO(S)/DIVISÃO(ÕES):} \\
 	\multicolumn{ 4}{|l|}{\FRDitaorgaointernobabel} \\[\esp]
 	\hline
-	\multicolumn{ 4}{|l|}{$^{8.}$ \scriptsize PALAVRAS-CHAVE SUGERIDAS PEL\ifthenelse{\equal{\@authorgender}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\@authorgender}{masc}}{}{A}:} \\
+	\multicolumn{ 4}{|l|}{$^{8.}$ \scriptsize PALAVRAS-CHAVE SUGERIDAS PEL\ifthenelse{\equal{\@authorGender}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\@authorGender}{masc}}{}{A}:} \\
 	\multicolumn{ 4}{|p{17cm}|}{\FRDitapalavrasautorbabel} \\[\esp]
 	\hline
 	\multicolumn{ 4}{|l|}{$^{9.}$ \scriptsize PALAVRAS-CHAVE RESULTANTES DE INDEXAÇÃO:} \\

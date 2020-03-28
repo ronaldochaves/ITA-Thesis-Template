@@ -6,7 +6,7 @@
     \renewcommand{\date}[1]{}
     \renewcommand{\@author}{\@authorbabel}                   %{Nome do Autor}
 		\newcommand{\@authorword}{\@authorwordbabel}					   %{Autor}
-    \newcommand{\itaauthoraddress}{\itaauthoraddressbabel}   %{Rua Tal, xxx}
+    \newcommand{\authorAddress}{\itaauthoraddressbabel}   %{Rua Tal, xxx}
 		\newcommand{\cdunumber}{\cdunumberbabel}								 %{Número de Classificação decimal universal para biblioteca}
 
     \newcommand{\authorgendermf}{\authorgendermfbabel}          % masc ou fem

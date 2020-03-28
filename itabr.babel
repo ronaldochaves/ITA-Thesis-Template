@@ -8,27 +8,27 @@
 %--------------------------------------------------------
 \gdef\itaoptioncoursetgbabel{Gradua{\c{c}}{\~a}o}
 \gdef\itaworkleveltgbabel{Trabalho}
-\gdef\itaauthortitletgbabel{Engenheir\ifthenelse{\equal{\@authorgender}{masc}}{o}{a}}
+\gdef\itaauthortitletgbabel{Engenheir\ifthenelse{\equal{\@authorGender}{masc}}{o}{a}}
 
 %--------------------------------------------------------
 % Mestrado
 %--------------------------------------------------------
 \gdef\itaoptioncoursemscbabel{Mestrado}
 \gdef\itaworklevelmscbabel{Disserta{\c{c}}{\~a}o}
-\gdef\itaauthortitlemscbabel{Mestr\ifthenelse{\equal{\@authorgender}{masc}}{e}{a}}
+\gdef\itaauthortitlemscbabel{Mestr\ifthenelse{\equal{\@authorGender}{masc}}{e}{a}}
 
 %--------------------------------------------------------
 % Doutorado
 %--------------------------------------------------------
 \gdef\itaoptioncoursedscbabel{Doutorado}
 \gdef\itaworkleveldscbabel{Tese}
-\gdef\itaauthortitledscbabel{Doutor\ifthenelse{\equal{\@authorgender}{masc}}{}{a}}
+\gdef\itaauthortitledscbabel{Doutor\ifthenelse{\equal{\@authorGender}{masc}}{}{a}}
 
 %--------------------------------------------------------
 %Exame de Qualificacao
 %--------------------------------------------------------
 \gdef\itaworklevelqualibabel{Exame de Qualifica{\c{c}}{\~a}o}
-\gdef\itaauthortitlequalibabel{Doutor\ifthenelse{\equal{\@authorgender}{masc}}{o}{a}}
+\gdef\itaauthortitlequalibabel{Doutor\ifthenelse{\equal{\@authorGender}{masc}}{o}{a}}
 \gdef\itaqualifictextbabel{{\nh{\itaworklevel\ submetido {\`a} avalia{\c{c}}{\~a}o, 
           como requisito parcial para a obten{\c{c}}{\~a}o do t{\'\i}tulo de \itaauthortitlequalibabel\ em 
 	  Ci{\^e}ncias no Programa de P{\'o}s-Gradua{\c{c}}{\~a}o em \itaworkcourse, {\'A}rea de \itaworkarea.}}}
@@ -172,16 +172,16 @@
         S\~{a}o Jos\'{e} dos Campos.}
 
 \gdef\itacedirnamebabel{CESS\~{A}O DE DIREITOS}
-\gdef\itacipauthorname{NOME D\ifthenelse{\equal{\@authorgender}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\@authorgender}{masc}}{}{A}:}
+\gdef\itacipauthorname{NOME D\ifthenelse{\equal{\@authorGender}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\@authorGender}{masc}}{}{A}:}
 \gdef\itacipworktitlebabel{TITULO DO TRABALHO:}
 \gdef\itacipworktype{TIPO DO TRABALHO/ANO:}
 
 \gdef\itacesdirtextbabel{{\'E} concedida ao Instituto Tecnol{\'o}gico de Aeron{\'a}utica permiss{\~a}o 
         para reproduzir c{\'o}pias desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualifica{\c{c}}{\~a}o}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{disserta{\c{c}}{\~a}o}{tese}} e para emprestar ou vender c{\'o}pias somente para prop{\'o}sitos 
-	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\@authorgender}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
-	parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualifica{\c{c}}{\~a}o}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{disserta{\c{c}}{\~a}o}{tese}} pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\@authorgender}{masc}}{do autor}{da autora}.}
+	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
+	parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualifica{\c{c}}{\~a}o}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{disserta{\c{c}}{\~a}o}{tese}} pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
 
 \gdef\itacesdirtgtextbabel{{\'E} concedida ao Instituto Tecnol{\'o}gico de Aeron{\'a}utica permiss{\~a}o 
         para reproduzir c{\'o}pias deste trabalho de gradua{\c{c}}{\~a}o e para emprestar ou vender c{\'o}pias somente para prop{\'o}sitos 
-	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\@authorgender}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
-	parte deste trabalho de gradua{\c{c}}{\~a}o pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\@authorgender}{masc}}{do autor}{da autora}.}
+	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
+	parte deste trabalho de gradua{\c{c}}{\~a}o pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
