@@ -62,34 +62,19 @@
 \DeclareOption{tg}{
   \input{tg.def}
 }
-% Engenheira (TG)
-\DeclareOption{tgfem}{
-  \input{tgfem.def}
-}
 % Mestrado
 \DeclareOption{msc}{
   \input{msc.def}
-}
-% Mestra
-\DeclareOption{mscfem}{
-  \input{mscfem.def}
 }
 % Doutorado
 \DeclareOption{dsc}{
   \input{dsc.def}  
 }
-% Doutora
-\DeclareOption{dscfem}{
-  \input{dscfem.def}
-}
 % Exame de Qualificacao
 \DeclareOption{quali}{
   \input{quali.def}  
 }
-% Exame de Qualificacao para Doutora
-\DeclareOption{qualifem}{
-  \input{qualifem.def}  
-}
+
 % Versao em ingles
 \newif\if@eng
 \DeclareOption{eng}{
@@ -130,7 +115,7 @@
 \if@eng
    \RequirePackage[english]{babel}
 \else
-   \RequirePackage[english,portuges,brazil]{babel}
+   \RequirePackage[english, portuguese]{babel}
 \fi
 
  \if@eng
@@ -222,11 +207,12 @@
 %%% \boss, etc ...  ;-)
 %==============================================================================
 % Autor...
-\renewcommand{\author}[2]{%               % Nome, Sobrenome
+\renewcommand{\author}[3]{%               % Nome, Sobrenome, Gênero
   \gdef\@authorfirst{#1}
   \gdef\@authorlast{#2}
+  \gdef\@authorgender{#3}
 }
-% Endereco do Autor (utilizado no verso da folha de rosto
+% Endereco do Autor (utilizado no verso da folha de rosto)
 \renewcommand{\itaauthoraddress}[3]{%
   \gdef\@itaauthoraddress{#1}
   \gdef\@itaauthorcep{#2}
@@ -277,10 +263,7 @@
 \newcommand{\cdu}[1]{
   \renewcommand{\cdunumber}{#1}
 }
-% Sexo do autor...
-\newcommand{\authorgender}[1]{
-  \renewcommand{\authorgendermf}{#1}
-}
+
 % Sexo do orientador...
 \newcommand{\advisorgender}[1]{
   \renewcommand{\advisorgendermf}{#1}
@@ -668,7 +651,7 @@
 				 \par 
 				 \small{\@authorfirst\ \@authorlast
 				 \par
-				 \@authorword\ifthenelse{\equal{\authorgendermf}{masc}}{}{\if@eng \else a\fi}}
+				 \ifthenelse{\equal{\@authorgender}{masc}}{}{\if@eng \else a\fi}}
 				 \vspace*{\stretch{1}}
 			 		 
 			 	 \hspace{3cm}\hrulefill\hspace{3cm}
@@ -1278,14 +1261,14 @@
 	\multicolumn{ 4}{|p{17cm}|}{$^{5.}$ \scriptsize TÍTULO E SUBTÍTULO:} \\
 	\multicolumn{ 4}{|l|}{\nh{\parbox[b]{.95\textwidth}{\@title}}} \\[\esp]
 	\hline
-	\multicolumn{ 4}{|l|}{$^{6.}$ \scriptsize AUTOR\ifthenelse{\equal{\authorgendermf}{masc}}{}{A}(ES):} \\
+	\multicolumn{ 4}{|l|}{$^{6.}$ \scriptsize AUTOR\ifthenelse{\equal{\@authorgender}{masc}}{}{A}(ES):} \\
 	\multicolumn{ 4}{|l|}{\textbf{\@authorfirst\ \@authorlast}} \\[\esp]
 	\hline
 	\multicolumn{ 4}{|l|}{$^{7.}$ \scriptsize INSTITUIÇÃO(ÕES)/ÓRGÃO(S) 
 	    INTERNO(S)/DIVISÃO(ÕES):} \\
 	\multicolumn{ 4}{|l|}{\FRDitaorgaointernobabel} \\[\esp]
 	\hline
-	\multicolumn{ 4}{|l|}{$^{8.}$ \scriptsize PALAVRAS-CHAVE SUGERIDAS PEL\ifthenelse{\equal{\authorgendermf}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\authorgendermf}{masc}}{}{A}:} \\
+	\multicolumn{ 4}{|l|}{$^{8.}$ \scriptsize PALAVRAS-CHAVE SUGERIDAS PEL\ifthenelse{\equal{\@authorgender}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\@authorgender}{masc}}{}{A}:} \\
 	\multicolumn{ 4}{|p{17cm}|}{\FRDitapalavrasautorbabel} \\[\esp]
 	\hline
 	\multicolumn{ 4}{|l|}{$^{9.}$ \scriptsize PALAVRAS-CHAVE RESULTANTES DE INDEXAÇÃO:} \\

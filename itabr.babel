@@ -16,8 +16,7 @@
 %--------------------------------------------------------
 \gdef\itaoptioncoursemscbabel{Mestrado}
 \gdef\itaworklevelmscbabel{Disserta{\c{c}}{\~a}o}
-\gdef\itaauthortitlemscbabel{Mestre}
-\gdef\itaauthortitlemscfembabel{Mestra}
+\gdef\itaauthortitlemscbabel{Mestr\ifthenelse{\equal{\@authorgender}{masc}}{e}{a}}
 
 %--------------------------------------------------------
 % Doutorado
@@ -138,7 +137,7 @@
 
 \gdef\cdunumberbabel{CDU}																					 %Número de Registro para organização nas prateleiras da biblioteca..} 
 
-\gdef\authorgendermfbabel{mf}                              					 % masc ou fem
+%\gdef\authorgendermfbabel{mf}                              					 % masc ou fem
 \gdef\advisorgendermfbabel{mf}                            					 % masc ou fem
 \gdef\coadvisorgendermfbabel{mf}                          					 % masc ou fem
 \gdef\bossgendermfbabel{mf}                               					 % masc ou fem
@@ -176,16 +175,16 @@
         S\~{a}o Jos\'{e} dos Campos.}
 
 \gdef\itacedirnamebabel{CESS\~{A}O DE DIREITOS}
-\gdef\itacipauthorname{NOME D\ifthenelse{\equal{\authorgendermf}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\authorgendermf}{masc}}{}{A}:}
+\gdef\itacipauthorname{NOME D\ifthenelse{\equal{\@authorgender}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\@authorgender}{masc}}{}{A}:}
 \gdef\itacipworktitlebabel{TITULO DO TRABALHO:}
 \gdef\itacipworktype{TIPO DO TRABALHO/ANO:}
 
 \gdef\itacesdirtextbabel{{\'E} concedida ao Instituto Tecnol{\'o}gico de Aeron{\'a}utica permiss{\~a}o 
         para reproduzir c{\'o}pias desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualifica{\c{c}}{\~a}o}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{disserta{\c{c}}{\~a}o}{tese}} e para emprestar ou vender c{\'o}pias somente para prop{\'o}sitos 
-	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\authorgendermf}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
-	parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualifica{\c{c}}{\~a}o}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{disserta{\c{c}}{\~a}o}{tese}} pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\authorgendermf}{masc}}{do autor}{da autora}.}
+	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\@authorgender}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
+	parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualifica{\c{c}}{\~a}o}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{disserta{\c{c}}{\~a}o}{tese}} pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\@authorgender}{masc}}{do autor}{da autora}.}
 
 \gdef\itacesdirtgtextbabel{{\'E} concedida ao Instituto Tecnol{\'o}gico de Aeron{\'a}utica permiss{\~a}o 
         para reproduzir c{\'o}pias deste trabalho de gradua{\c{c}}{\~a}o e para emprestar ou vender c{\'o}pias somente para prop{\'o}sitos 
-	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\authorgendermf}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
-	parte deste trabalho de gradua{\c{c}}{\~a}o pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\authorgendermf}{masc}}{do autor}{da autora}.}
+	acad{\^e}micos e cient{\'\i}ficos. \ifthenelse{\equal{\@authorgender}{masc}}{O autor}{A autora} reserva outros direitos de  publica{\c{c}}{\~a}o e nenhuma 
+	parte deste trabalho de gradua{\c{c}}{\~a}o pode ser reproduzida sem a autoriza{\c{c}}{\~a}o \ifthenelse{\equal{\@authorgender}{masc}}{do autor}{da autora}.}
