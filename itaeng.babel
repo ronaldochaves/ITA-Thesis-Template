@@ -9,7 +9,6 @@
 \gdef\itaoptioncoursetgbabel{Undergraduation}
 \gdef\itaworkleveltgbabel{Work}
 \gdef\itaauthortitletgbabel{Engineer}
-\gdef\itaauthortitletgfembabel{Engineer}
 
 %--------------------------------------------------------
 % Mestrado
@@ -17,8 +16,6 @@
 \gdef\itaoptioncoursemscbabel{Master}
 \gdef\itaworklevelmscbabel{Dissertation}
 \gdef\itaauthortitlemscbabel{Master of Science}
-\gdef\itaauthortitlemscfembabel{Master of Science}
-
 
 %--------------------------------------------------------
 % Doutorado
@@ -26,15 +23,13 @@
 \gdef\itaoptioncoursedscbabel{Doctorate}
 \gdef\itaworkleveldscbabel{Thesis}
 \gdef\itaauthortitledscbabel{Doctor of Science}
-\gdef\itaauthortitledscfembabel{Doctor of Science}
 
 %--------------------------------------------------------
 %Exame de Qualificacao
 %--------------------------------------------------------
 \gdef\itaworklevelqualibabel{Qualifying Exam}
 \gdef\itaauthortitlequalibabel{Doctor of Science}
-\gdef\itaauthortitlequalifembabel{Doctor of Science}
-\gdef\itaqualifictextbabel{{\nh{\itaworklevel\ presented in partial fulfillment of the requirements for the degree of Doctor of Science in the Graduate Program of \itaworkcourse, \itaworkarea\ {A}rea}}.}
+\gdef\itaqualifictextbabel{{\nh{\itaworklevelqualibabel\ presented in partial fulfillment of the requirements for the degree of \itaauthortitlequalibabel\ in the Graduate Program of \itaworkcourse, \itaworkarea\ {A}rea}}.}
 
 \gdef\itanametitlequalibabel{ITA -- \textsc{Instituto Tecnol\'{o}gico de Aeron\'{a}utica}}
 \gdef\itaposnametitlequalibabel{\textsc{Graduate in \itaworkcourse}}

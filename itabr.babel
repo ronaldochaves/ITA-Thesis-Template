@@ -8,8 +8,7 @@
 %--------------------------------------------------------
 \gdef\itaoptioncoursetgbabel{Gradua{\c{c}}{\~a}o}
 \gdef\itaworkleveltgbabel{Trabalho}
-\gdef\itaauthortitletgbabel{Engenheiro}
-\gdef\itaauthortitletgfembabel{Engenheira}
+\gdef\itaauthortitletgbabel{Engenheir\ifthenelse{\equal{\@authorgender}{masc}}{o}{a}}
 
 %--------------------------------------------------------
 % Mestrado
@@ -23,17 +22,15 @@
 %--------------------------------------------------------
 \gdef\itaoptioncoursedscbabel{Doutorado}
 \gdef\itaworkleveldscbabel{Tese}
-\gdef\itaauthortitledscbabel{Doutor}
-\gdef\itaauthortitledscfembabel{Doutora}
+\gdef\itaauthortitledscbabel{Doutor\ifthenelse{\equal{\@authorgender}{masc}}{}{a}}
 
 %--------------------------------------------------------
 %Exame de Qualificacao
 %--------------------------------------------------------
 \gdef\itaworklevelqualibabel{Exame de Qualifica{\c{c}}{\~a}o}
-\gdef\itaauthortitlequalibabel{Doutor}
-\gdef\itaauthortitlequalifembabel{Doutora}
+\gdef\itaauthortitlequalibabel{Doutor\ifthenelse{\equal{\@authorgender}{masc}}{o}{a}}
 \gdef\itaqualifictextbabel{{\nh{\itaworklevel\ submetido {\`a} avalia{\c{c}}{\~a}o, 
-          como requisito parcial para a obten{\c{c}}{\~a}o do t{\'\i}tulo de \itaauthortitle\ em 
+          como requisito parcial para a obten{\c{c}}{\~a}o do t{\'\i}tulo de \itaauthortitlequalibabel\ em 
 	  Ci{\^e}ncias no Programa de P{\'o}s-Gradua{\c{c}}{\~a}o em \itaworkcourse, {\'A}rea de \itaworkarea.}}}
 
 \gdef\itanametitlequalibabel{ITA -- \textsc{Instituto Tecnol{\'o}gico de Aeron{\'a}utica}}
