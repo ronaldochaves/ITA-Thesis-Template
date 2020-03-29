@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.28)  28 MAR 2020 19:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.28)  28 MAR 2020 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,7 +949,7 @@ Package `hyperref' Info: End of reference (cite) `cite.ITALUS2004', line 20.
 Package `hyperref' Info: End of reference (cite) `cite.ITALUS2004', line 20.
 ]
 Package hyperref Info: Anchor `figure.caption.9' on input line 25.
-<Cap1/cupim.pdf, id=247, 233.87375pt x 221.82875pt>
+<Cap1/cupim.pdf, id=249, 233.87375pt x 221.82875pt>
 File: Cap1/cupim.pdf Graphic file (type pdf)
 <use Cap1/cupim.pdf>
 Package pdftex.def Info: Cap1/cupim.pdf  used on input line 27.
@@ -976,7 +976,7 @@ Package `hyperref' Info: End of reference (cite) `cite.COFFEE2000', line 36.
 Package `hyperref' Info: End of reference (cite) `cite.COFFEE2000', line 36.
  <./Cap1/cupim.pdf>]
 Package hyperref Info: Anchor `figure.caption.10' on input line 45.
-<Cap1/cupimconcreto.pdf, id=260, 401.5pt x 289.08pt>
+<Cap1/cupimconcreto.pdf, id=262, 401.5pt x 289.08pt>
 File: Cap1/cupimconcreto.pdf Graphic file (type pdf)
 <use Cap1/cupimconcreto.pdf>
 Package pdftex.def Info: Cap1/cupimconcreto.pdf  used on input line 47.
@@ -1064,7 +1064,7 @@ ela\relax }} {table.caption.11}{0}{lot}
 Package hyperref Info: Reference (cite) `cite.Callaghan1995' on input line 22.
 Package hyperref Info: Reference (cite) `cite.Callaghan1995' on input line 22.
 Package hyperref Info: Anchor `figure.caption.12' on input line 24.
-<Cap2/spiderrobot.JPG, id=296, 614.295pt x 462.22687pt>
+<Cap2/spiderrobot.JPG, id=298, 614.295pt x 462.22687pt>
 File: Cap2/spiderrobot.JPG Graphic file (type jpg)
 <use Cap2/spiderrobot.JPG>
 Package pdftex.def Info: Cap2/spiderrobot.JPG  used on input line 26.
@@ -1161,7 +1161,7 @@ Package hyperref Info: Anchor `chapter.5' on input line 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 3.
 
-pdftex: bookmark at 3: {5} {Refer\^encias} {chapter.5}{0}{toc}
+pdftex: bookmark at 3: {5} {Referências} {chapter.5}{0}{toc}
 Package hyperref Info: Anchor `cite.Arystides1994' on input line 13.
 Package hyperref Info: Anchor `cite.Assenmacher1993' on input line 21.
 Package hyperref Info: Anchor `cite.Callaghan1995' on input line 27.
@@ -1212,7 +1212,7 @@ pdftex: bookmark at 1: {A.1} {\numberline{A.1}Uma Primeira Se\c c\~ao para o Ap
 \^endice} {section.A.1}{1}{toc}
 Package hyperref Info: Anchor `equation.A.1.1' on input line 6.
 Package hyperref Info: Anchor `figure.caption.14' on input line 14.
-<ApeA/pragas_ciclo_cupim.pdf, id=345, 401.5pt x 403.5075pt>
+<ApeA/pragas_ciclo_cupim.pdf, id=347, 401.5pt x 403.5075pt>
 File: ApeA/pragas_ciclo_cupim.pdf Graphic file (type pdf)
 <use ApeA/pragas_ciclo_cupim.pdf>
 Package pdftex.def Info: ApeA/pragas_ciclo_cupim.pdf  used on input line 16.
@@ -1281,7 +1281,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 222.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 222.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 222.
 Package rerunfilecheck Info: File `tese.out' has not changed.
-(rerunfilecheck)             Checksum: C3BACE03ED9C2DB7D8B4ACD3219D7193;1787.
+(rerunfilecheck)             Checksum: C92411346A3898F233570A227DCB2ED6;1777.
 Package rerunfilecheck Info: File `tese.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1291,11 +1291,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 10370 strings out of 494296
- 150895 string characters out of 6168574
- 261710 words of memory out of 5000000
- 13277 multiletter control sequences out of 15000+600000
- 60503 words of font info for 113 fonts, out of 8000000 for 9000
+ 10379 strings out of 494296
+ 151029 string characters out of 6168574
+ 260361 words of memory out of 5000000
+ 13285 multiletter control sequences out of 15000+600000
+ 63096 words of font info for 118 fonts, out of 8000000 for 9000
  454 hyphenation exceptions out of 8191
  43i,12n,45p,1081b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -1307,19 +1307,20 @@ ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tese.pdf (27 pages, 450373 bytes).
+onts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb>
+Output written on tese.pdf (27 pages, 459369 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 391 compressed objects within 4 object streams
+ 454 PDF objects out of 1000 (max. 8388607)
+ 394 compressed objects within 4 object streams
  96 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
