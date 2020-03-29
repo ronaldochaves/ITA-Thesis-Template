@@ -1,8 +1,8 @@
 % !TeX encoding = ISO-8859-1
+
 %%% by
 %%%   Fabio Fagundes Silveira   -  ffs [at] ita [dot] br
 %%%   $Id: itabr.babel 41 2006-07-20 14:30:26Z ffs $
-%%%
 
 %--------------------------------------------------------
 % Graduação (TG)
@@ -86,7 +86,7 @@
 \gdef\nameannex{Anexo}
 \gdef\itafigurenamebabel{FIGURA}
 \gdef\itatablenamebabel{TABELA}
-\gdef\itadvnamebabel{Versão Preliminar:}
+\gdef\itadraftbabel{Versão Preliminar:}
 \gdef\itapagedocregbabel{Folha de Registro do Documento}
 
 %--------------------------------------------------------
@@ -97,10 +97,10 @@
 \gdef\@authorwordbabel{Autor}							      % {Autor}
 \gdef\itaauthoraddressbabel{Rua Tal, xxx}                     % {Rua Tal, xxx}
 
-\gdef\itaadvisornamebabel{Nome d\ifthenelse{\equal{\advisorgendermf}{masc}}{o}{a} Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}}                     
+\gdef\advisorNamebabel{Nome d\ifthenelse{\equal{\advisorgendermf}{masc}}{o}{a} Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}}                     
 
 % Nome do Orientador
-\gdef\itaadvisortitlebabel{Prof\ifthenelse{\equal{\advisorgendermf}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}.}
+\gdef\advisorTitlebabel{Prof\ifthenelse{\equal{\advisorgendermf}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}.}
 	
 % Orientador																										
 \gdef\itaadvisorwordbabel{Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}}
@@ -141,11 +141,8 @@
 \gdef\bossgendermfbabel{mf}                               					 % masc ou fem
 \gdef\bosscoursegendermfbabel{mf}                         					 % masc ou fem
 
-\gdef\finalpaperbabel{Trabalho de Graduação}							 % Trabalho de Graduação
-\gdef\itatglevelbabel{Trabalho de Conclusão de Curso (Graduação)}
-
-
-% Trabalho de Conclusão de Curso (Graduação)
+\gdef\finalpaperbabel{Trabalho de Graduação}					   % Trabalho de Graduação
+\gdef\itatglevelbabel{Trabalho de Conclusão de Curso (Graduação)}  % Trabalho de Conclusão de Curso (Graduação)
 
 %--------------------------------------------------------
 %Pagina CIP
@@ -154,9 +151,9 @@
 \gdef\itacipbibbabel{Divisão de Informação e Documentação}
 
 \gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. 
-\'{A}rea de \itaworkarea\ -- Instituto Tecnológico de Aeronáutica,\@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \itaadvisortitle\ \itaadvisorname. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Título.\par}
+\'{A}rea de \itaworkarea\ -- Instituto Tecnológico de Aeronáutica,\@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Título.\par}
 	
-\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- Instituto Tecnológico de Aeronáutica, \@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \itaadvisortitle\ \itaadvisorname. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Título.\par}
+\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- Instituto Tecnológico de Aeronáutica, \@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Título.\par}
 
 \gdef\itarefbibnamecipbabel{REFERÊNCIA BIBLIOGRÁFICA}
 

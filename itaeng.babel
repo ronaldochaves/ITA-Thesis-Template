@@ -1,8 +1,8 @@
 % !TeX encoding = ISO-8859-1
+
 %%% by
 %%%   Fabio Fagundes Silveira   -  ffs [at] ita [dot] br
 %%%   $Id: itaeng.babel 41 2006-07-20 14:30:26Z ffs $
-%%%
 
 %--------------------------------------------------------
 % Graduação (TG)
@@ -82,7 +82,7 @@
 \gdef\nameannex{Annex}
 \gdef\itafigurenamebabel{FIGURE}
 \gdef\itatablenamebabel{TABLE}
-\gdef\itadvnamebabel{Draft Version:}
+\gdef\itadraftbabel{Draft Version:}
 \gdef\itapagedocregbabel{Folha de Registro do Documento}
 
 
@@ -94,8 +94,8 @@
 \gdef\@authorwordbabel{Author}									   % {Autor}
 \gdef\itaauthoraddressbabel{xxx, foo Street}                       % {Rua Tal, xxx}
 
-\gdef\itaadvisornamebabel{Advisor's Name}                          % {Nome do Orientador}
-\gdef\itaadvisortitlebabel{Prof.~Dr.}                              % {Prof.~Dr.}
+\gdef\advisorNamebabel{Advisor's Name}                          % {Nome do Orientador}
+\gdef\advisorTitlebabel{Prof.~Dr.}                              % {Prof.~Dr.}
 \gdef\itaadvisorwordbabel{Advisor}                                 % {Orientador}
 \gdef\itacoadvisornamebabel{Coadvisor's Name}                      % {Nome do Coorientador}
 \gdef\itacoadvisortitlebabel{Prof.~Dr.}                            % {Prof.~Dr.}
@@ -135,9 +135,9 @@
 \gdef\itaciptitlebabel{Cataloging-in Publication Data}
 \gdef\itacipbibbabel{Documentation and Information Division}
 
-\gdef\itacipdata1babel {\itaworklevel\ of \itaauthortitle\ -- Course of \itaworkcourse. Area of \itaworkarea\ -- Instituto Tecnológico de Aeronáutica, \@publyear. Advisor: \itaadvisortitle\ \itaadvisorname. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Title.\par}
+\gdef\itacipdata1babel {\itaworklevel\ of \itaauthortitle\ -- Course of \itaworkcourse. Area of \itaworkarea\ -- Instituto Tecnológico de Aeronáutica, \@publyear. Advisor: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Title.\par}
 
-\gdef\itaciptgdata1babel {Final paper (Undergraduation study) -- Course of \itaworkcourse -- Instituto Tecnológico de Aeronáutica, \@publyear. Advisor: \itaadvisortitle\ \itaadvisorname. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. IInstituto Tecnológico de Aeronáutica. II.~Title.\par}
+\gdef\itaciptgdata1babel {Final paper (Undergraduation study) -- Course of \itaworkcourse -- Instituto Tecnológico de Aeronáutica, \@publyear. Advisor: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. IInstituto Tecnológico de Aeronáutica. II.~Title.\par}
 
 \gdef\itarefbibnamecipbabel{BIBLIOGRAPHIC REFERENCE}
 
