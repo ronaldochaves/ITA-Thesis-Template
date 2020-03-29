@@ -1,7 +1,9 @@
+% !TeX encoding = ISO-8859-1
 %%% by
 %%%   Fábio Fagundes Silveira   -  ffs [at] ita [dot] br
 %%%   $Id: defaults.def 2 2006-01-18 11:55:58Z ffs $
 %%%
+
     \renewcommand{\@title}{\@titlebabel}                     %{T\'{i}tulo do Trabalho}
     \renewcommand{\date}[1]{}
     \renewcommand{\@author}{\@authorbabel}                   %{Nome do Autor}

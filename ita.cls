@@ -1,3 +1,4 @@
+% !TeX encoding = ISO-8859-1
 %==============================================================================
 % This is the ITA LateX class - classe de documento com padrões do ITA
 % written by
@@ -98,7 +99,7 @@
     \@dvtrue
 }
 
-\ExecuteOptions{defaults,classic}
+\ExecuteOptions{defaults, classic}
 \ProcessOptions
 \AtEndOfPackage{
     \renewcommand{\baselinestretch}{\itaspacing}
@@ -113,9 +114,10 @@
 \RequirePackage{ifthen}
 
 \if@eng
-   \RequirePackage[english]{babel}
+	\RequirePackage[english]{babel}
 \else
-   \RequirePackage[english, portuguese]{babel}
+	% Comandos em português (e.g. faz \chapter virar Capítulo no texto) e hifenização correta
+	\RequirePackage[english, portuguese]{babel}
 \fi
 
  \if@eng
@@ -124,15 +126,15 @@
    \input{itabr.babel}
  \fi
 
-\RequirePackage[latin1]{inputenc}
+\RequirePackage[latin1]{inputenc}		% Muda a condificação da fonte, possibilitando copiar textos com acentos etc
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
-\RequirePackage{amsfonts}                 % Fontes p/ conjuntos: R,Z,H,...
+\RequirePackage{amsfonts}               % Fontes p/ conjuntos: R, Z, H etc
 \RequirePackage{lastpage}
 \RequirePackage{indentfirst}
 %ajustando fonte das legendas. Se quiser aumentar um pouco as legendas, troque footnotesize por small
-%\RequirePackage[labelsep=endash,font=footnotesize]{caption}
-\RequirePackage[labelsep=endash]{caption}
+%\RequirePackage[labelsep = endash, font = footnotesize]{caption}
+\RequirePackage[labelsep = endash]{caption}
 \RequirePackage{longtable}
 \RequirePackage{array}
 \RequirePackage{tabularx}
@@ -142,54 +144,55 @@
 \usepackage{makeglo}
 \renewcommand{\glossmaxlabelwidth}{\hspace{3cm}}
 
-%% opcoes de cores
-%% linkcolor=blue,citecolor=gray,urlcolor=cyan
-\RequirePackage{color}        %% aplicar cores no texto
-\RequirePackage{hyphenat}     %% hifenização
-\RequirePackage{makeidx}      %% ÍNDICE
+%% Opções de cores
+%% linkcolor = blue, citecolor = gray, urlcolor = cyan
+\RequirePackage{color}        % Aplicar cores no texto
+\RequirePackage{hyphenat}     % Hifenização
+\RequirePackage{makeidx}      % Índice
 
+%% Hyperref
 %==============================================================================
-%%% Hyperref
-\definecolor{gray}{rgb}{0.4,0.4,0.4}
-\definecolor{bblue}{rgb}{0,0,.8} %% tom azul mais escuro
+\definecolor{gray}{rgb}{0.4, 0.4, 0.4}
+\definecolor{bblue}{rgb}{0, 0, 0.8} 		% Tom azul mais escuro
 
-%\RequirePackage[debug,a4paper,pagebackref=true,breaklinks,bookmarksopen=true,colorlinks=true,linkcolor=bblue,citecolor=bblue,urlcolor=bblue,bookmarksnumbered=true,hyperindex=true,verbose=true]{hyperref} %% essencial %% gera pdf/dvi com links
+%\RequirePackage[debug, a4paper, pagebackref = true, breaklinks, bookmarksopen = true, colorlinks = true, linkcolor = bblue, citecolor = bblue, urlcolor = bblue, bookmarksnumbered = true, hyperindex = true, verbose = true]{hyperref}
+% Gera pdf/dvi com links
 
-%% LINKS ALTERADOS PARA COR PRETA
-\RequirePackage[debug,a4paper,pagebackref=true,breaklinks,bookmarksopen=true,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,bookmarksnumbered=true,hyperindex=true,verbose=true]{hyperref} 
+% Links alterados para cor preta
+\RequirePackage[debug, a4paper, pagebackref = true, breaklinks, bookmarksopen = true, colorlinks = true, linkcolor = black, citecolor = black, urlcolor = black, bookmarksnumbered = true, hyperindex = true, verbose = true]{hyperref} 
 %==============================================================================
 
 \ifpdf
-  \RequirePackage{ae} %% fontes para pdf
+  \RequirePackage{ae} 					% Fontes para pdf
   \RequirePackage[pdftex]{graphicx}
   \RequirePackage[pdftex]{geometry}
 \else
-  \RequirePackage[T1]{fontenc}
+  \RequirePackage[T1]{fontenc}			% Possibilita usar "á" ao invés de "\'a", "ç" ao invés de "\c{c}" etc
   \RequirePackage[dvips]{graphicx}
   \RequirePackage[dvips]{geometry}
 \fi
 
-% dimensoes das paginas
-\geometry{a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm,verbose,headheight=0.56cm, headsep=0.5cm,footskip=3em}
+% Dimensões das páginas
+\geometry{a4paper, left = 3cm, right = 2cm, top = 3cm, bottom = 2cm, verbose, headheight = 0.56cm, headsep = 0.5cm, footskip = 3em}
 
 \newif\ifhyperref
 \@ifpackageloaded{hyperref}{\hyperreftrue}{\hyperreffalse}
 
 %==============================================================================
 %%% ABNTeX ...
-\RequirePackage[alf,abnt-emphasize=bf,abnt-etal-cite=2,abnt-etal-list=0,abnt-etal-text=it]{abntcite}
+\RequirePackage[alf, abnt-emphasize = bf, abnt-etal-cite = 2, abnt-etal-list = 0, abnt-etal-text = it]{abntcite}
 %\RequirePackage{natbib}
 
 %==============================================================================
 % ALTERAR TAMANHO DA FONTE DOS TÍTULOS
-%\RequirePackage{titlesec} %alterar tamanho da fonte
+%\RequirePackage{titlesec} 							% Alterar tamanho da fonte
 %\titleformat{\section}
 % {\large\bfseries}{\thesection}{0.5em}{}
 %\titleformat{\subsection}
 % {\normalsize\bfseries}{\thesubsection}{0.5em}{}	
 %\titleformat{\subsubsection}
 % {\normalsize\bfseries}{\thesubsubsection}{0.5em}{}	
-%\titleformat{\paragraph} % para 4o nivel
+%\titleformat{\paragraph} 							% para 4o nível
 % {\normalsize\bfseries}{\theparagraph}{0.5em}{}	
 
 %==============================================================================
@@ -202,8 +205,7 @@
 }
 
 %==============================================================================
-%%% Novos comandos: \author, \authorAddress, \advisor, \coadvisor,
-%%% \boss, etc ...  ;-)
+%%% Novos comandos: \author, \authorAddress, \advisor, \coadvisor, \boss etc
 %==============================================================================
 % Autor
 \renewcommand{\author}[3]{               % Nome, Sobrenome e Gênero
@@ -212,7 +214,7 @@
   \gdef\@authorGender{#3}
 }
 
-% Endereco do Autor (utilizado no verso da folha de rosto)
+% Endereço do autor (utilizado no verso da folha de rosto)
 \renewcommand{\authorAddress}[4]{        % Rua, CEP, Cidade e Estado
   \gdef\@authorStreet{#1}
   \gdef\@authorZIP{#2}
@@ -221,7 +223,7 @@
 }
 
 % Orientador
-\newcommand{\advisor}[4][\itaadvisorwordbabel]{     % [word] ,title, name
+\newcommand{\advisor}[4][\itaadvisorwordbabel]{     		% [word], title, name
   \renewcommand{\itaadvisorname}{#3}
   \renewcommand{\itaadvisortitle}{#2}
 	\gdef\@itaadvisorinst{#4}
@@ -230,8 +232,9 @@
   \gdef\@advisor{#2~#3 \\ #1}
   \gdef\itaadvisorwordbabelll{#1}
 }
+
 % Coorientador (opcional)
-\newcommand{\coadvisor}[4][\itacoadvisorwordbabel]{%
+\newcommand{\coadvisor}[4][\itacoadvisorwordbabel]{
   \gdef\@itacoadvisorname{#3}
   \gdef\@itacoadvisortitle{#2}
   \gdef\@itacoadvisorinst{#4}
@@ -239,29 +242,34 @@
   \gdef\@coadvisor{#2~#3 \\ #1}
   \gdef\itacoadvisorwordbabelll{#1}
 }
-% Pro-Reitor de Pos-Graduacao e Pesquisa
-\newcommand{\boss}[3][\itabosswordbabel]{      %[word] ,title, name
+
+% Pró-Reitor de Pós-Graduação e Pesquisa
+\newcommand{\boss}[3][\itabosswordbabel]{      				% [word], title, name
   \renewcommand{\itabossname}{#3}
   \renewcommand{\itabosstitle}{#2}
   \renewcommand{\itabossword}{#1}
   \gdef\@boss {#2~#3 \\ #1}
 }
-% Coordenador do respectivo curso de graduação...
-\newcommand{\bosscourse}[3][\itabosscoursewordbabel]{      %[word] ,title, name
+
+% Coordenador do curso de graduação
+\newcommand{\bosscourse}[3][\itabosscoursewordbabel]{		% [word], title, name
   \renewcommand{\itabosscoursename}{#3}
   \renewcommand{\itabosscoursetitle}{#2}
   \renewcommand{\itabosscourseword}{#1}
   \gdef\@bosscourse {#2~#3 \\ #1}
 }
-% Curso de Graduação/Programa de Pós-Graduação...
+
+% Curso de Graduação/Programa de Pós-Graduação
 \newcommand{\course}[1]{
   \renewcommand{\itaworkcourse}{#1}
 }
-% Area do Curso...
+
+% Área do Curso
 \newcommand{\area}[1]{
   \renewcommand{\itaworkarea}{#1}
 }
-% Número de CDU...
+
+% Número de CDU
 \newcommand{\cdu}[1]{
   \renewcommand{\cdunumber}{#1}
 }
@@ -274,16 +282,17 @@
 \newcommand{\coadvisorgender}[1]{
    \renewcommand{\coadvisorgendermf}{#1}
 }
-% Sexo do Pró-reitor da Pós-graduação...
+% Sexo do Pró-reitor da Pós-graduação
 \newcommand{\bossgender}[1]{
   \renewcommand{\bossgendermf}{#1}
 }
-% Sexo do Coordenador do curso no caso de TG...
+% Sexo do Coordenador do curso no caso de TG
 \newcommand{\bosscoursegender}[1]{
   \renewcommand{\bosscoursegendermf}{#1}
 }
+
 %==============================================================================
-%%% Hack: Pagina de Rosto para Teses
+%%% Hack: Página de Rosto para Teses
 %==============================================================================
 \newcommand{\itatitletext}{\itatitletextbabel}
 
