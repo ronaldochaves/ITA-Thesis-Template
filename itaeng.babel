@@ -32,26 +32,26 @@
 \gdef\itaauthortitlequalibabel{Doctor of Science}
 \gdef\itaqualifictextbabel{{\nh{\itaworklevelqualibabel\ presented in partial fulfillment of the requirements for the degree of \itaauthortitlequalibabel\ in the Graduate Program of \itaworkcourse, \itaworkarea\ {A}rea}}.}
 
-\gdef\itanametitlequalibabel{ITA -- \textsc{Instituto Tecnológico de Aeronáutica}}
+\gdef\itanametitlequalibabel{\@instAbbr -- \textsc{\@instFull}}
 \gdef\itaposnametitlequalibabel{\textsc{Graduate in \itaworkcourse}}
 \gdef\itaarenametitlequalibabel{\textsc{\itaworkarea\ Area}}
 
 %--------------------------------------------------------
 %Tese
 %--------------------------------------------------------
-\gdef\itatitletextbabel{\nh{\itaworklevel\ presented to the Instituto Tecnológico de Aeronáutica, in partial fulfillment of the requirements for the degree of \itaauthortitle\ in the Graduate Program of \itaworkcourse, Field of \itaworkarea}\vspace{12pt}.}
+\gdef\itatitletextbabel{\nh{\itaworklevel\ presented to the \@instFull, in partial fulfillment of the requirements for the degree of \itaauthortitle\ in the Graduate Program of \itaworkcourse, Field of \itaworkarea}\vspace{12pt}.}
 
 \gdef\itathesisapprovedmembersbabel{\itaworklevel\ approved in its final version by signatories below:}
                                    
-\gdef\itacountrybabel{Brazil}
+\gdef\@instCountry{Brazil}
 
 %--------------------------------------------------------
 %Trabalho de Graduação (TG)
 %--------------------------------------------------------
-\gdef\itatitletexttgbabel{\nh{Work presented to the Instituto Tecnológico de Aeronáutica, in partial fulfillment of the requirements for the conclusion of the course in \itaworkcourse.}\vspace{12pt}.}
+\gdef\itatitletexttgbabel{\nh{Work presented to the \@instFull, in partial fulfillment of the requirements for the conclusion of the course in \itaworkcourse.}\vspace{12pt}.}
 	  
 \gdef\itathesisapprovedmemberstgbabel{This publication was accepted like Final Work of Undergraduation Study}
-% outra possibilidade: Final Work approved in its final version by signatories below: \gdef\itacountrytgbabel{Brazil}
+% outra possibilidade: Final Work approved in its final version by signatories below:
 
 %--------------------------------------------------------
 %Glossário
@@ -135,21 +135,21 @@
 \gdef\itaciptitlebabel{Cataloging-in Publication Data}
 \gdef\itacipbibbabel{Documentation and Information Division}
 
-\gdef\itacipdata1babel {\itaworklevel\ of \itaauthortitle\ -- Course of \itaworkcourse. Area of \itaworkarea\ -- Instituto Tecnológico de Aeronáutica, \@publyear. Advisor: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Title.\par}
+\gdef\itacipdata1babel {\itaworklevel\ of \itaauthortitle\ -- Course of \itaworkcourse. Area of \itaworkarea\ -- \@instFull, \@publyear. Advisor: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Title.\par}
 
-\gdef\itaciptgdata1babel {Final paper (Undergraduation study) -- Course of \itaworkcourse -- Instituto Tecnológico de Aeronáutica, \@publyear. Advisor: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. IInstituto Tecnológico de Aeronáutica. II.~Title.\par}
+\gdef\itaciptgdata1babel {Final paper (Undergraduation study) -- Course of \itaworkcourse -- \@instFull, \@publyear. Advisor: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Co-advisor: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Title.\par}
 
 \gdef\itarefbibnamecipbabel{BIBLIOGRAPHIC REFERENCE}
 
-\gdef\itacip2babel {\itaworklevel\ of \itaauthortitle\ -- Instituto Tecnológico de Aeronáutica, São José dos Campos.}
+\gdef\itacip2babel {\itaworklevel\ of \itaauthortitle\ -- \@instFull, \@instCity.}
 
-\gdef\itaciptg2babel {Final paper (Undergraduation study) -- Instituto Tecnológico de Aeronáutica, São José dos Campos.}
+\gdef\itaciptg2babel {Final paper (Undergraduation study) -- \@instFull, \@instCity.}
 
 \gdef\itacedirnamebabel{CESSION OF RIGHTS}
 \gdef\itacipauthorname{AUTHOR'S NAME:}
 \gdef\itacipworktitlebabel{PUBLICATION TITLE:}
 \gdef\itacipworktype{PUBLICATION KIND/YEAR:}
 
-\gdef\itacesdirtextbabel{It is granted to Instituto Tecnológico de Aeronáutica permission to reproduce copies of this \ifthenelse{\equal{\itaoptionlevel}{quali}}{qualifying exam}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertation}{thesis}} and to only loan or to sell copies for academic and scientific purposes. The author reserves other publication rights and no part of this \ifthenelse{\equal{\itaoptionlevel}{quali}}{qualifying exam}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertation}{thesis}} can be reproduced without the authorization of the author.}
+\gdef\itacesdirtextbabel{It is granted to \@instFull\ permission to reproduce copies of this \ifthenelse{\equal{\itaoptionlevel}{quali}}{qualifying exam}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertation}{thesis}} and to only loan or to sell copies for academic and scientific purposes. The author reserves other publication rights and no part of this \ifthenelse{\equal{\itaoptionlevel}{quali}}{qualifying exam}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertation}{thesis}} can be reproduced without the authorization of the author.}
 
-\gdef\itacesdirtgtextbabel{It is granted to Instituto Tecnológico de Aeronáutica permission to reproduce copies of this final paper and to only loan or to sell copies for academic and scientific purposes. The author reserves other publication rights and no part of this final paper can be reproduced without the authorization of the author.}
+\gdef\itacesdirtgtextbabel{It is granted to \@instFull\ permission to reproduce copies of this final paper and to only loan or to sell copies for academic and scientific purposes. The author reserves other publication rights and no part of this final paper can be reproduced without the authorization of the author.}

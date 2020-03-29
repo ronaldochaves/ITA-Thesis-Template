@@ -208,8 +208,24 @@
 }
 
 %==============================================================================
-%%% Novos comandos: \author, \authorAddress, \advisor, \coadvisor, \boss etc
+%%% Novos comandos: \inst, \author, \authorAddress, \advisor, \coadvisor, \boss etc
 %==============================================================================
+
+% Instituição
+\newcommand{\inst}[2]{               	 % Nome e abreviação
+	\gdef\@instFull{#1}
+	\gdef\@instAbbr{#2}
+}
+
+% Endereço da instituição
+\newcommand{\instAddress}[5]{               	 % Rua, CEP, Cidade e Estado
+	\gdef\@instStreet{#1}
+	\gdef\@instZIP{#2}
+	\gdef\@instCity{#3}
+	\gdef\@instState{#4}
+	\gdef\@instCampus{#5}
+}
+
 % Autor
 \renewcommand{\author}[3]{               % Nome, Sobrenome e Gênero
 	\gdef\@authorFirst{#1}
@@ -329,7 +345,7 @@
 	\noindent
 	\center
 	\begin{spacing}{1.5}
-		{\Large \itanametitlequalibabel } 		\\		%  ITA -- \textsc{Instituto Tecnológico de Aeronáutica}} \\
+		{\Large \itanametitlequalibabel } 		\\		%  \@instAbbr -- \textsc{\@instFull}} \\
 		{\Large \itaposnametitlequalibabel }	\\		%  \textsc{Pós-Graduação em \itaworkcourse}} \\
 		{\large \itaarenametitlequalibabel }			%  \textsc{Área de \itaworkarea}}
 	\end{spacing}
@@ -372,11 +388,11 @@
 
 	\if@eng
 		\begin{spacing}{1.5}
-			São José dos Campos: \@publmonth\ \@publday, \@publyear
+			\@instCity: \@publmonth\ \@publday, \@publyear
 		\end{spacing}
 	\else
 		\begin{spacing}{1.5}
-			São José dos Campos, \@publmonth\ de \@publyear
+			\@instCity, \@publmonth\ de \@publyear
 		\end{spacing}
 	\fi
 }
@@ -489,7 +505,7 @@
 	\vspace*{\stretch{2}}
 
 	\begin{spacing}{1.0}
-		Campo Montenegro \\ São José dos Campos, SP - \itacountrybabel \\ \@publyear
+		\@instCampus \\ \@instCity, \@instState\ -- \@instCountry \\ \@publyear
 	\end{spacing}
 
 	\@makecippage        						% Cria verso da folha de rosto
@@ -509,7 +525,7 @@
 		\parbox[c][660pt][c]{\textwidth}{
 			\centering        
 		
-			\itaformatworktitle{\MakeUppercase{instituto tecnológico de aeronáutica}}
+			\itaformatworktitle{\MakeUppercase{\@instFull}}
 			
 			\vspace*{\stretch{2}}
 			
@@ -583,7 +599,7 @@
 						\setlength{\baselineskip}{0.7\baselineskip}
 						\noindent\@authorLast, \@authorFirst\par
 						\@title\ / \@authorFirst\ \@authorLast.			\\
-						\noindent São José dos Campos, \@publyear.\par
+						\noindent \@instCity, \@publyear.\par
 						\NumPenultimaPagina f.\par
 						\vspace{\baselineskip}
 						\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itaciptgdata1babel}{\itacipdata1babel}
@@ -688,9 +704,9 @@
 				 \vspace*{\stretch{2}}
 				
 				 \if@eng
-						\small{S{\~a}o Jos{\'e} dos Campos: \@publmonth\ \@publday, \@publyear.}
+						\small{\@instCity: \@publmonth\ \@publday, \@publyear.}
 				 \else
-						\small{S{\~a}o Jos{\'e} dos Campos, \@publday\ de \@publmonth\ de \@publyear.}
+						\small{\@instCity, \@publday\ de \@publmonth\ de \@publyear.}
 				 \fi
 				
 			 \end{center}
@@ -714,26 +730,25 @@
        \end{spacing}
        \vfill
        \center
-       \large\textbf{ITA}
+       \large\textbf{\@instAbbr}
        }
 }
 
 %==============================================================================
 %%% Dedicatória
 %==============================================================================
-\newenvironment{itadedication}
-	{
-		\thispagestyle{empty}%
-		\pdfbookmark[0]{\namededicatory}{dedication}
-		\begin{flushright}%
-		\null\vfil \@beginparpenalty\@lowpenalty
-		\vspace{120mm}
-		\hspace{80mm}
-		\begin{minipage}[b]{0.45\textwidth}\begin{spacing}{1.5}
-	}
-	{
-		\end{spacing}\end{minipage}\end{flushright}\par\vfil\null\newpage
-	}
+\newenvironment{itadedication}{
+	\thispagestyle{empty}%
+	\pdfbookmark[0]{\namededicatory}{dedication}
+	\begin{flushright}%
+	\null\vfil \@beginparpenalty\@lowpenalty
+	\vspace{120mm}
+	\hspace{80mm}
+	\begin{minipage}[b]{0.45\textwidth}\begin{spacing}{1.5}
+}
+{
+	\end{spacing}\end{minipage}\end{flushright}\par\vfil\null\newpage
+}
 
 %==============================================================================
 %%% Agradecimentos
@@ -746,36 +761,33 @@
 % \begin{flushright}\begin{spacing}{1.5}}
 % {\end{spacing}\end{flushright} \par\vfil\null\newpage}
 
-\newenvironment{itathanks}[1][\nameacknowledgment]
-	{
-		\chapter*{#1}
-		\pdfbookmark[0]{\nameacknowledgment}{acknowledgment}
-	}
-	{
-		\par\vfil\null\newpage
-	}
+\newenvironment{itathanks}[1][\nameacknowledgment]{
+	\chapter*{#1}
+	\pdfbookmark[0]{\nameacknowledgment}{acknowledgment}
+}
+{
+	\par\vfil\null\newpage
+}
 
 %==============================================================================
 %%% Resumo
 %==============================================================================
-\newenvironment{abstract}
-	{
-		\chapter*{\nameabstract}
-	 	\pdfbookmark[0]{\nameabstract}{resumo}
- 	}
- 	{
- 	}
+\newenvironment{abstract}{
+	\chapter*{\nameabstract}
+ 	\pdfbookmark[0]{\nameabstract}{resumo}
+}
+{
+}
 
 %==============================================================================
 %%% Abstract
 %==============================================================================
-\newenvironment{englishabstract}
-	{
-		\chapter*{\nameengabstract}
-		\pdfbookmark[0]{\nameengabstract}{abstract}
-	}
-	{
-	}
+\newenvironment{englishabstract}{
+	\chapter*{\nameengabstract}
+	\pdfbookmark[0]{\nameengabstract}{abstract}
+}
+{
+}
 
 %==============================================================================
 %%% Redefinição de chapter
@@ -801,41 +813,39 @@
 %%% Lista de Símbolos e Lista de Abreviaturas ao Sumário
 %==============================================================================
 % Bibliografia
-\renewenvironment{thebibliography}[1]
-	{
-		\chapter*{
-			\bibname
-			\refstepcounter{chapter}
-			\addcontentsline{toc}{chapter}{\bibname}    % Thanks to D.Farfan
-			\@mkboth{\MakeUppercase{\bibname}}
-			{\MakeUppercase{\bibname}}
-		}       										% Thanks to ffs :-)
-		
-		\singlespacing			
-		\flushleft				
-		\list{\@biblabel{\@arabic\c@enumiv}}%
-		
-		{
-			\settowidth\labelwidth{\@biblabel{#1}}%
-			\leftmargin\labelwidth
-			\advance\leftmargin\labelsep
-			\@openbib@code
-			\usecounter{enumiv}%
-			\let\p@enumiv\@empty
-			\renewcommand\theenumiv{\@arabic\c@enumiv}
-		}
+\renewenvironment{thebibliography}[1]{
+	\chapter*{
+		\bibname
+		\refstepcounter{chapter}
+		\addcontentsline{toc}{chapter}{\bibname}    % Thanks to D.Farfan
+		\@mkboth{\MakeUppercase{\bibname}}
+		{\MakeUppercase{\bibname}}
+	}       										% Thanks to ffs :-)
 	
-		\sloppy
-		\clubpenalty4000
-		\@clubpenalty \clubpenalty
-		\widowpenalty4000%
-		\sfcode`\.\@m
-	}
+	\singlespacing			
+	\flushleft				
+	\list{\@biblabel{\@arabic\c@enumiv}}%
 	{
-		\def\@noitemerr
-		{\@latex@warning{Empty `thebibliography' environment}}%
-		\endlist
+		\settowidth\labelwidth{\@biblabel{#1}}%
+		\leftmargin\labelwidth
+		\advance\leftmargin\labelsep
+		\@openbib@code
+		\usecounter{enumiv}%
+		\let\p@enumiv\@empty
+		\renewcommand\theenumiv{\@arabic\c@enumiv}
 	}
+
+	\sloppy
+	\clubpenalty4000
+	\@clubpenalty \clubpenalty
+	\widowpenalty4000%
+	\sfcode`\.\@m
+}
+{
+	\def\@noitemerr
+	{\@latex@warning{Empty `thebibliography' environment}}%
+	\endlist
+}
 
 % Lista de Figuras
 \renewcommand\listoffigures{
@@ -1053,7 +1063,7 @@
 	\begin{tabular}{l l l l}
 		\@ifundefined{metitlea}{}{\metitlea\@ & \menamea\@ & \hspace{1cm} \merolea\@ & - \hspace{0.5cm} \meinsta\@} \\
 		
-		\advisorTitle & \advisorName & \hspace{1cm} \itaadvisorwordbabelll & - \hspace{0.5cm} ITA \\
+		\advisorTitle & \advisorName & \hspace{1cm} \itaadvisorwordbabelll & - \hspace{0.5cm} \@instAbbr \\
 		
 		\@ifundefined{@coadvisor}{}{\@itacoadvisortitle & \@itacoadvisorname & \hspace{1cm} \itacoadvisorwordbabelll & - \hspace{0.5cm} \@itacoadvisorinst \\}
 		

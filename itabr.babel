@@ -32,28 +32,26 @@
 \gdef\itaauthortitlequalibabel{Doutor\ifthenelse{\equal{\@authorGender}{masc}}{o}{a}}
 \gdef\itaqualifictextbabel{{\nh{\itaworklevel\ submetido à avaliação, como requisito parcial para a obtenção do título de \itaauthortitlequalibabel\ em Ciências no Programa de Pós-Graduação em \itaworkcourse, Área de \itaworkarea.}}}
 
-\gdef\itanametitlequalibabel{ITA -- \textsc{Instituto Tecnológico de Aeronáutica}}
+\gdef\itanametitlequalibabel{\@instAbbr -- \textsc{\@instFull}}
 \gdef\itaposnametitlequalibabel{\textsc{Pós-Graduação em \itaworkcourse}}
 \gdef\itaarenametitlequalibabel{\textsc{Área de \itaworkarea}}
 
 %--------------------------------------------------------
 %Tese ou Dissertação
 %--------------------------------------------------------
-\gdef\itatitletextbabel{\nh{\itaworklevel\ apresentada à Pró-Reitoria de Pós-Graduação e Pesquisa do Instituto Tecnológico de Aeronáutica, como parte dos requisitos para obtenção do título de \itaauthortitle\ em Ciências no Programa de Pós-Graduação em \itaworkcourse, Área de \itaworkarea}.}
+\gdef\itatitletextbabel{\nh{\itaworklevel\ apresentada à Pró-Reitoria de Pós-Graduação e Pesquisa do \@instFull, como parte dos requisitos para obtenção do título de \itaauthortitle\ em Ciências no Programa de Pós-Graduação em \itaworkcourse, Área de \itaworkarea}.}
 
 \gdef\itathesisapprovedmembersbabel{\itaworklevel\ aprovada em sua versão final pelos abaixo assinados:}
                                    
-\gdef\itacountrybabel{Brasil}
+\gdef\@instCountry{Brasil}
 
 %--------------------------------------------------------
 %Trabalho de Graduação (TG)
 %--------------------------------------------------------
-\gdef\itatitletexttgbabel{\nh{Trabalho apresentado à Pró-Reitoria de Graduação do Instituto Tecnológico de Aeronáutica, como parte dos requisitos para conclusão do curso de \itaworkcourse}.}
+\gdef\itatitletexttgbabel{\nh{Trabalho apresentado à Pró-Reitoria de Graduação do \@instFull, como parte dos requisitos para conclusão do curso de \itaworkcourse}.}
 	  
 \gdef\itathesisapprovedmemberstgbabel{Essa publicação foi aceita como Relatório Final de Trabalho de Graduação.}
 % outra possibilidade: Trabalho aprovado em sua versão final pelos abaixo assinados:
-
-\gdef\itacountrytgbabel{Brasil}
 
 %--------------------------------------------------------
 %Glossário
@@ -150,22 +148,21 @@
 \gdef\itaciptitlebabel{Dados Internacionais de Catalogação-na-Publicação (CIP)}
 \gdef\itacipbibbabel{Divisão de Informação e Documentação}
 
-\gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. 
-\'{A}rea de \itaworkarea\ -- Instituto Tecnológico de Aeronáutica,\@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Título.\par}
+\gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. Área de \itaworkarea\ -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 	
-\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- Instituto Tecnológico de Aeronáutica, \@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. Instituto Tecnológico de Aeronáutica. II.~Título.\par}
+\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 
 \gdef\itarefbibnamecipbabel{REFERÊNCIA BIBLIOGRÁFICA}
 
-\gdef\itacip2babel {\itaworklevel\ de \itaoptioncourse\ -- Instituto Tecnológico de Aeronáutica, São José dos Campos.}
+\gdef\itacip2babel {\itaworklevel\ de \itaoptioncourse\ -- \@instFull, \@instCity.}
 				
-\gdef\itaciptg2babel {Trabalho de Conclusão de Curso (Graduação) -- Instituto Tecnológico de Aeronáutica, São José dos Campos.}
+\gdef\itaciptg2babel {Trabalho de Conclusão de Curso (Graduação) -- \@instFull, \@instCity.}
 
 \gdef\itacedirnamebabel{CESSÃO DE DIREITOS}
 \gdef\itacipauthorname{NOME D\ifthenelse{\equal{\@authorGender}{masc}}{O}{A} AUTOR\ifthenelse{\equal{\@authorGender}{masc}}{}{A}:}
 \gdef\itacipworktitlebabel{TÍTULO DO TRABALHO:}
 \gdef\itacipworktype{TIPO DO TRABALHO/ANO:}
 
-\gdef\itacesdirtextbabel{É concedida ao Instituto Tecnológico de Aeronáutica permissão para reproduzir cópias desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
+\gdef\itacesdirtextbabel{É concedida ao \@instFull\ permissão para reproduzir cópias desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
 
-\gdef\itacesdirtgtextbabel{É concedida ao Instituto Tecnológico de Aeronáutica permissão para reproduzir cópias deste trabalho de graduação e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte deste trabalho de graduação pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
+\gdef\itacesdirtgtextbabel{É concedida ao \@instFull\ permissão para reproduzir cópias deste trabalho de graduação e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte deste trabalho de graduação pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
