@@ -153,3 +153,7 @@
 \gdef\itacesdirtextbabel{It is granted to \@instFull\ permission to reproduce copies of this \ifthenelse{\equal{\itaoptionlevel}{quali}}{qualifying exam}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertation}{thesis}} and to only loan or to sell copies for academic and scientific purposes. The author reserves other publication rights and no part of this \ifthenelse{\equal{\itaoptionlevel}{quali}}{qualifying exam}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertation}{thesis}} can be reproduced without the authorization of the author.}
 
 \gdef\itacesdirtgtextbabel{It is granted to \@instFull\ permission to reproduce copies of this final paper and to only loan or to sell copies for academic and scientific purposes. The author reserves other publication rights and no part of this final paper can be reproduced without the authorization of the author.}
+
+\gdef\FRDitaorgaointernobabel{\@instFull\ -- \@instAbbr}
+
+\gdef\FRDitapalavraapresentacaobabel{\@instAbbr, \@instCity. Curso de \itaoptioncourse. Programa de Pós-Graduação em \itaworkcourse. Área de \itaworkarea. \advisorRole: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em \@publday/\@publmonth/\@publyear. Publicada em \@FRDday/\@FRDmonth/\@FRDyear.}

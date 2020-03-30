@@ -37,7 +37,7 @@
 %	\documentclass[dsc, eng, dv]{ita}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\documentclass[msc]{ita}    % ITA.cls based on standard book.cls 
+\documentclass[tg]{ita}    % ITA.cls based on standard book.cls 
 % Quando alterar a classe, por exemplo de [msc] para [msc, eng]) rode mais uma vez o botão BUILD OUTPUT caso haja erro
 \usepackage{ae}
 \usepackage{graphicx}
@@ -70,15 +70,16 @@
 \author{Maria das Graças}{Silva}{fem}
 \authorAddress{Av. Cidade Jardim, 679}{12.233-066}{São José dos Campos}{SP}
 
-% Título da Tese/Dissertação
+% Título da Tese/Dissertação/Trabalho
 \title{Uma Abordagem Sobre o Dilema do Cupim Frente ao Concreto Armado Utilizando Diferentes Composições Cimentísticas}
 
 \course{Engenharia Aeronáutica e Mecânica}			% Programa de PG ou Curso de Graduação
 \area{Sistemas Aeroespaciais e Mecatrônica}			% Área de concentração na PG (Não utilizado no caso de TG)\\
 
 % Orientador
-\advisorgender{masc}                    % masc ou fem
-\advisor{Prof.~Dr.}{Adalberto Santos Dupont}{ITA}
+%\advisorgender{masc}                    % masc ou fem
+%\advisor{Prof.~Dr.}{Adalberto Santos Dupont}{ITA}
+\advisor[Prof.]{Dr.}{Adalberto Santos Dupont}{masc}{ITA}
 
 % Coorientador (Caso não haja coorientador, colocar ambas as variáveis \coadvisorgender e \coadvisor comentadas, com um % na frente)
 \coadvisorgender{fem}									% masc ou fem
@@ -121,6 +122,7 @@
 % Dedicatória: Não esqueça essa seção  ... :-)
 \begin{itadedication}
 Aos amigos da Graduação e Pós-Graduação do ITA por motivarem tanto a criação deste template pelo Fábio Fagundes Silveira quanto por motivarem a mim e outras pessoas a atualizarem e aprimorarem este excelente trabalho.
+
 \end{itadedication}
 
 % Agradecimentos
@@ -205,16 +207,16 @@ it is because I stood on the shoulders of giants.''\\}
 
 % Folha de Registro do Documento
 % Valores dos campos do formulário
-\FRDitadata{25 de março de 2015}
+\FRDitadata{25}{março}{2015}				% Data da publicação no ITA.
 \FRDitadocnro{DCTA/ITA/DM-018/2015} 			% Número de registro fornecido pela biblioteca
-\FRDitaorgaointerno{Instituto Tecnológico de Aeronáutica -- ITA}
-%Exemplo no caso de pós-graduação: Instituto Tecnol{\'o}gico de Aeron{\'a}utica -- ITA
+%\FRDitaorgaointerno{\@instFull~-- \@instAbbr}
+%Exemplo no caso de pós-graduação: \@instFull -- \@instAbbr
 \FRDitapalavrasautor{Cupim; Cimento; Estruturas}
 \FRDitapalavrasresult{Cupim; Dilema; Construção}
 %Exemplo no caso de graduação (TG):
-%\FRDitapalavraapresentacao{Trabalho de Graduação, ITA, São José dos Campos, 2015. \NumPenultimaPagina\ páginas.}
+%\FRDitapalavraapresentacao{Trabalho de Graduação, \@instAbbr, \@instCity, 2015. \NumPenultimaPagina\ páginas.}
 %Exemplo no caso de pós-graduação (msc, dsc):
-\FRDitapalavraapresentacao{ITA, São José dos Campos. Curso de Mestrado. Programa de Pós-Graduação em Engenharia Aeronáutica e Mecânica. Área de Sistemas Aeroespaciais e Mecatrônica. Orientador: Prof.~Dr. Adalberto Santos Dupont. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em 05/03/2015. Publicada em 25/03/2015.}
+%\FRDitapalavraapresentacao{'\@instAbbr', \@instCity. Curso de Mestrado. Programa de Pós-Graduação em Engenharia Aeronáutica e Mecânica. Área de Sistemas Aeroespaciais e Mecatrônica. Orientador: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em 05/03/2015. Publicada em 25/03/2015.}
 \FRDitaresumo{\input{Cap0/resumo}}
 
 %  Primeiro parâmetro: Nacional ou Internacional -- N/I

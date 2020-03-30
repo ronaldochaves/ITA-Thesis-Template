@@ -207,6 +207,12 @@
 	\gdef\@publyear{#3}
 }
 
+\newcommand{\FRDitadata}[3]{
+	\gdef\@FRDday{#1}
+	\gdef\@FRDmonth{#2}
+	\gdef\@FRDyear{#3}
+}
+
 %==============================================================================
 %%% Novos comandos: \inst, \author, \authorAddress, \advisor, \coadvisor, \boss etc
 %==============================================================================
@@ -242,14 +248,27 @@
 }
 
 % Orientador
-\newcommand{\advisor}[4][\itaadvisorwordbabel]{     		% [word], title, name
+%\newcommand{\advisor}[4][\itaadvisorwordbabel]{     		% [word], title, name
+%	\renewcommand{\advisorName}{#3}
+%	\renewcommand{\advisorTitle}{#2}
+%	\gdef\advisorInst{#4}
+%	\renewcommand{\itaadvisorword}{#1}
+%	\gdef\@advisor{#2~#3 \\ #1}
+%	\gdef\@advisorTG{#1 \\ #2~#3 (#4)}
+%	\gdef\itaadvisorwordbabelll{#1}
+%}
+
+% Orientador
+\newcommand{\advisor}[5][Prof.]{     		% [word], title, name
+	\gdef\advisorCarrer{#1}
+	\gdef\advisorDegree{#2}
 	\renewcommand{\advisorName}{#3}
-	\renewcommand{\advisorTitle}{#2}
-	\gdef\advisorInst{#4}
-	\renewcommand{\itaadvisorword}{#1}
-	\gdef\@advisor{#2~#3 \\ #1}
-	\gdef\@advisorTG{#1 \\ #2~#3 (#4)}
-	\gdef\itaadvisorwordbabelll{#1}
+	\gdef\advisorGender{#4}
+	\gdef\advisorInst{#5}
+	\gdef\advisorRole{\itaadvisorword}
+	\renewcommand{\advisorTitle}{\advisorCarrer~\advisorDegree}
+	\gdef\@advisor{\advisorTitle~\advisorName \\ \advisorRole}
+	\gdef\@advisorTG{\advisorRole \\ \advisorTitle~\advisorName\ (\advisorInst)}
 }
 
 % Coorientador (opcional)
@@ -294,9 +313,9 @@
 }
 
 % Sexo do orientador...
-\newcommand{\advisorgender}[1]{
-  \renewcommand{\advisorgendermf}{#1}
-}
+%\newcommand{\advisorgender}[1]{
+%  \renewcommand{\advisorgendermf}{#1}
+%}
 % Sexo do coorientador...
 \newcommand{\coadvisorgender}[1]{
    \renewcommand{\coadvisorgendermf}{#1}
@@ -686,7 +705,7 @@
 				 \par 
 				 \small{\advisorName\ (\advisorInst)
 				 \par
-				 \itaadvisorwordbabelll}
+				 \advisorRole}
          \vspace*{\stretch{1}}
 			 		
 				 \@ifundefined{@coadvisor}{}{      % Co-advisor eh opcional
@@ -1063,7 +1082,7 @@
 	\begin{tabular}{l l l l}
 		\@ifundefined{metitlea}{}{\metitlea\@ & \menamea\@ & \hspace{1cm} \merolea\@ & - \hspace{0.5cm} \meinsta\@} \\
 		
-		\advisorTitle & \advisorName & \hspace{1cm} \itaadvisorwordbabelll & - \hspace{0.5cm} \@instAbbr \\
+		\advisorTitle & \advisorName & \hspace{1cm} \advisorRole & - \hspace{0.5cm} \@instAbbr \\
 		
 		\@ifundefined{@coadvisor}{}{\@itacoadvisortitle & \@itacoadvisorname & \hspace{1cm} \itacoadvisorwordbabelll & - \hspace{0.5cm} \@itacoadvisorinst \\}
 		
@@ -1304,17 +1323,12 @@
 \newcommand{\esp}{.2cm}
 
 % Definições dos valores dos campos do formulário
-\newcommand{\FRDitadata}[1]{\gdef\FRDitadatababel{#1}}
 \newcommand{\FRDitadocnro}[1]{\gdef\FRDitadocnrobabel{#1}}
-\newcommand{\FRDitaorgaointerno}[1]{\gdef\FRDitaorgaointernobabel{#1}}
+\newcommand{\FRDitaorgaointerno}{\FRDitaorgaointernobabel}
 \newcommand{\FRDitapalavrasautor}[1]{\gdef\FRDitapalavrasautorbabel{#1}}
 \newcommand{\FRDitapalavrasresult}[1]{\gdef\FRDitapalavrasresultbabel{#1}}
-\newcommand{\FRDitapalavraapresentacao}[1]{\gdef\FRDitapalavraapresentacaobabel{#1}}
-
-\newcommand{\FRDitaresumo}[1]{
-    \gdef\FDRitaabstractcontent{#1}
-}
-
+\newcommand{\FRDitapalavraapresentacao}{\FRDitapalavraapresentacaobabel}
+\newcommand{\FRDitaresumo}[1]{\gdef\FDRitaabstractcontent{#1}}
 
 %  Opções para: 
 %  Nacional ou Internacional -- N/I
@@ -1380,21 +1394,21 @@
 		\multicolumn{ 4}{|c|}{} \\
 		\hline
 		
-		$^{1.}$ \scriptsize CLASSIFICAÇÃO/TIPO & 
-		$^{2.}$ \scriptsize DATA               & 
-		$^{3.}$ \scriptsize DOCUMENTO Nº       & 
-		$^{4.}$ \scriptsize Nº DE PÁGINAS             \tabularnewline 
+		$^{1.}$ \scriptsize CLASSIFICAÇÃO/TIPO: & 
+		$^{2.}$ \scriptsize DATA:               & 
+		$^{3.}$ \scriptsize DOCUMENTO Nº:       & 
+		$^{4.}$ \scriptsize Nº DE PÁGINAS:             \tabularnewline 
 		
 		\centering{
 			\ifthenelse{\equal{\itaoptionlevel}{tg}}
 			{TC}
 			{\ifthenelse{\equal{\itaoptionlevel}{msc}}
 			{DM}
-			{TD}				
+			{TD}
 			}
 		}  & 
 		
-		\centering{\FRDitadatababel}   & 
+		\centering{\@FRDday\ de \@FRDmonth\ de \@FRDyear}   & 
 		
 		\centering\scriptsize \FRDitadocnrobabel  &  
 		

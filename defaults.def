@@ -11,8 +11,8 @@
 \newcommand{\authorAddress}{\itaauthoraddressbabel}		 	% {Rua Tal, xxx}
 \newcommand{\cdunumber}{\cdunumberbabel}				 	% {Classificação Decimal Universal - Biblioteca}
 
-\newcommand{\authorgendermf}{\authorgendermfbabel}          % masc ou fem
-\newcommand{\advisorgendermf}{\advisorgendermfbabel}        % masc ou fem
+\newcommand{\authorGendermf}{\authorGendermfbabel}          % masc ou fem
+\newcommand{\advisorGendermf}{\advisorGendermfbabel}        % masc ou fem
 \newcommand{\coadvisorgendermf}{\coadvisorgendermfbabel}    % masc ou fem
 \newcommand{\bossgendermf}{\bossgendermfbabel}              % masc ou fem
 \newcommand{\bosscoursegendermf}{\bosscoursegendermfbabel}  % masc ou fem
@@ -63,5 +63,5 @@
 \gdef\FRDitaorgaointernobabel{Órgão Interno..}
 \gdef\FRDitapalavrasautorbabel{Palavras-chave do autor..}
 \gdef\FRDitapalavrasresultbabel{Palavras-chave resultantes..}
-\gdef\FRDitapalavraapresentacaobabel{Curso Programa Área Orientador Data..}
+%\gdef\FRDitapalavraapresentacaobabel{Curso Programa Área Orientador Data..}
 \gdef\FDRitaabstractcontent{Resumo do Trabalho..}

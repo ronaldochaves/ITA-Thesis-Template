@@ -95,13 +95,13 @@
 \gdef\@authorwordbabel{Autor}							      % {Autor}
 \gdef\itaauthoraddressbabel{Rua Tal, xxx}                     % {Rua Tal, xxx}
 
-\gdef\advisorNamebabel{Nome d\ifthenelse{\equal{\advisorgendermf}{masc}}{o}{a} Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}}                     
+\gdef\advisorNamebabel{Nome d\ifthenelse{\equal{\advisorGender}{masc}}{o}{a} Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}}                     
 
 % Nome do Orientador
-\gdef\advisorTitlebabel{Prof\ifthenelse{\equal{\advisorgendermf}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}.}
+\gdef\advisorTitlebabel{Prof\ifthenelse{\equal{\advisorGender}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\advisorGender}{masc}}{}{a}.}
 	
 % Orientador																										
-\gdef\itaadvisorwordbabel{Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}}
+\gdef\itaadvisorwordbabel{Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}}
 																													
 \gdef\itacoadvisornamebabel{Nome d\ifthenelse{\equal{\coadvisorgendermf}{masc}}{o}{a} Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}}
 
@@ -133,8 +133,8 @@
 \gdef\courseofbabel{Curso de}									   % {Curso de}
 \gdef\cdunumberbabel{CDU}										   % Número de Registro (Biblioteca)
 
-%\gdef\authorgendermfbabel{mf}                              				  % masc ou fem
-\gdef\advisorgendermfbabel{mf}                            					 % masc ou fem
+\gdef\authorGendermfbabel{mf}                              				  % masc ou fem
+\gdef\advisorGendermfbabel{mf}                            					 % masc ou fem
 \gdef\coadvisorgendermfbabel{mf}                          					 % masc ou fem
 \gdef\bossgendermfbabel{mf}                               					 % masc ou fem
 \gdef\bosscoursegendermfbabel{mf}                         					 % masc ou fem
@@ -148,9 +148,9 @@
 \gdef\itaciptitlebabel{Dados Internacionais de Catalogação-na-Publicação (CIP)}
 \gdef\itacipbibbabel{Divisão de Informação e Documentação}
 
-\gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. Área de \itaworkarea\ -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
+\gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. Área de \itaworkarea\ -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 	
-\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorgendermf}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
+\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 
 \gdef\itarefbibnamecipbabel{REFERÊNCIA BIBLIOGRÁFICA}
 
@@ -166,3 +166,7 @@
 \gdef\itacesdirtextbabel{É concedida ao \@instFull\ permissão para reproduzir cópias desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
 
 \gdef\itacesdirtgtextbabel{É concedida ao \@instFull\ permissão para reproduzir cópias deste trabalho de graduação e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte deste trabalho de graduação pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
+
+\gdef\FRDitaorgaointernobabel{\@instFull\ -- \@instAbbr}
+
+\gdef\FRDitapalavraapresentacaobabel{\@instAbbr, \@instCity. Curso de \itaoptioncourse. Programa de Pós-Graduação em \itaworkcourse. Área de \itaworkarea. \advisorRole: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em \@publday/\@publmonth/\@publyear. Publicada em \@FRDday/\@FRDmonth/\@FRDyear.}
