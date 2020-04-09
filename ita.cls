@@ -141,6 +141,7 @@
 \RequirePackage{longtable}
 \RequirePackage{array}
 \RequirePackage{tabularx}
+\RequirePackage[en-US, calc]{datetime2}
 
 %==============================================================================
 %%% Glossário
@@ -201,13 +202,23 @@
 %==============================================================================
 % Redefinição da data (para ter dia, mês e ano separados)
 %==============================================================================
+\DTMnewdatestyle{monthdeyyyy}% label
+{% definitions
+	\selectlanguage{portuguese}
+	\renewcommand*{\DTMdisplaydate}[4]{%
+		\DTMmonthname{##2}\DTMportugesmonthyearsep##1}%
+	\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
 \renewcommand{\date}[3]{
+	\DTMsavedate{publdate}{#3-#2-#1}
 	\gdef\@publday{#1}
 	\gdef\@publmonth{#2}
 	\gdef\@publyear{#3}
 }
 
 \newcommand{\FRDitadata}[3]{
+	%\DTMsavedate{defensedate}{#3-#2-#1}
 	\gdef\@FRDday{#1}
 	\gdef\@FRDmonth{#2}
 	\gdef\@FRDyear{#3}
@@ -407,11 +418,14 @@
 
 	\if@eng
 		\begin{spacing}{1.5}
-			\@instCity: \@publmonth\ \@publday, \@publyear
+			%\@instCity: \@publmonth\ \@publday, \@publyear
+			\@instCity: \DTMusedate{publdate}
 		\end{spacing}
 	\else
 		\begin{spacing}{1.5}
-			\@instCity, \@publmonth\ de \@publyear
+			%\@instCity, \@publmonth\ de \@publyear
+			\DTMsetdatestyle{monthdeyyyy}
+			\@instCity, \DTMusedate{publdate}
 		\end{spacing}
 	\fi
 }
@@ -466,7 +480,8 @@
 		
 		\vspace*{\stretch{2}}
 		
-		\@publyear
+		%\@publyear
+		\DTMfetchyear{publdate}
 	\end{spacing}
 
 	\@makecippage        						% Cria verso da folha de rosto
@@ -524,7 +539,8 @@
 	\vspace*{\stretch{2}}
 
 	\begin{spacing}{1.0}
-		\@instCampus \\ \@instCity, \@instState\ -- \@instCountry \\ \@publyear
+		%\@instCampus \\ \@instCity, \@instState\ -- \@instCountry \\ \@publyear
+		\@instCampus \\ \@instCity, \@instState\ -- \@instCountry \\ \DTMfetchyear{publdate}
 	\end{spacing}
 
 	\@makecippage        						% Cria verso da folha de rosto
@@ -564,7 +580,8 @@
 			
 			\begin{spacing}{1.0}
 				\Large{\finalpaper \\
-				\@publyear}
+				%\@publyear}
+				\DTMfetchyear{publdate}}
 			\end{spacing}
 			
 			\vspace*{\stretch{2}}
@@ -618,7 +635,8 @@
 						\setlength{\baselineskip}{0.7\baselineskip}
 						\noindent\@authorLast, \@authorFirst\par
 						\@title\ / \@authorFirst\ \@authorLast.			\\
-						\noindent \@instCity, \@publyear.\par
+						%\noindent \@instCity, \@publyear.\par
+						\noindent \@instCity, \DTMfetchyear{publdate}.\par
 						\NumPenultimaPagina f.\par
 						\vspace{\baselineskip}
 						\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itaciptgdata1babel}{\itacipdata1babel}
@@ -640,7 +658,9 @@
 	\begin{onehalfspacing}
 		{
 			\setlength{\baselineskip}{0.7\baselineskip}
-			\MakeUppercase{\@authorLast}, \@authorFirst. \textbf{\@title}. \@publyear.                     \NumPenultimaPagina f. \ifthenelse{\equal{\itaoptionlevel}{tg}}{\itaciptg2babel}{\itacip2babel} \\
+			%\MakeUppercase{\@authorLast}, \@authorFirst. \textbf{\@title}. \@publyear.
+			\MakeUppercase{\@authorLast}, \@authorFirst. \textbf{\@title}. \DTMfetchyear{publdate}.
+			\NumPenultimaPagina f. \ifthenelse{\equal{\itaoptionlevel}{tg}}{\itaciptg2babel}{\itacip2babel} \\
 		}
 	\end{onehalfspacing}
 }
@@ -656,7 +676,9 @@
 			\setlength{\baselineskip}{0.7\baselineskip}
 			{\footnotesize \itacipauthorname}{\normalsize \@authorFirst\ \@authorLast} \\
 			{\footnotesize \itacipworktitlebabel} {\normalsize \@title.} 				\\
-			{\footnotesize \itacipworktype} {\normalsize\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itatglevel}{\itaworklevel} / \@publyear} \\
+			%{\footnotesize \itacipworktype} {\normalsize\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itatglevel}{\itaworklevel} / \@publyear}
+			{\footnotesize \itacipworktype} {\normalsize\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itatglevel}{\itaworklevel} / \DTMfetchyear{publdate}}
+			\\
 		}
 		
 		\vspace{\baselineskip}
@@ -723,9 +745,11 @@
 				 \vspace*{\stretch{2}}
 				
 				 \if@eng
-						\small{\@instCity: \@publmonth\ \@publday, \@publyear.}
+						%\small{\@instCity: \@publmonth\ \@publday, \@publyear.}
+						\small{\@instCity: \DTMusedate{publdate}.}
 				 \else
-						\small{\@instCity, \@publday\ de \@publmonth\ de \@publyear.}
+						%\small{\@instCity, \@publday\ de \@publmonth\ de \@publyear.}
+						\small{\@instCity, {\selectlanguage{portuguese} \DTMusedate{mydate}}}
 				 \fi
 				
 			 \end{center}
@@ -1434,7 +1458,7 @@
 		\multicolumn{ 4}{|l|}{$^{10.}$ {\scriptsize APRESENTAÇÃO:}  \hfill 
 		(\N) \textbf{Nacional} \ \ \ 
 		(\I) \textbf{Internacional} } \\
-		\multicolumn{ 4}{|p{17cm}|}{\FRDitapalavraapresentacaobabel} \\[\esp]
+		\multicolumn{ 4}{|p{17cm}|}{\DTMsetdatestyle{ddmmyyyy} \DTMsetup{datesep=/} \FRDitapalavraapresentacaobabel} \\[\esp]
 		\hline
 		\multicolumn{ 4}{|l|}{$^{11.}$ \scriptsize RESUMO:} \\
 		\multicolumn{ 4}{|c|}{\parbox[t][12cm]{.95\textwidth}{\FDRitaabstractcontent}} \\[\esp]
