@@ -418,12 +418,10 @@
 
 	\if@eng
 		\begin{spacing}{1.5}
-			%\@instCity: \@publmonth\ \@publday, \@publyear
 			\@instCity: \DTMusedate{defDate}
 		\end{spacing}
 	\else
 		\begin{spacing}{1.5}
-			%\@instCity, \@publmonth\ de \@publyear
 			\DTMsetdatestyle{monthdeyyyy}
 			\@instCity, \DTMusedate{defDate}
 		\end{spacing}
@@ -480,7 +478,6 @@
 		
 		\vspace*{\stretch{2}}
 		
-		%\@publyear
 		\DTMfetchyear{defDate}
 	\end{spacing}
 
@@ -539,7 +536,6 @@
 	\vspace*{\stretch{2}}
 
 	\begin{spacing}{1.0}
-		%\@instCampus \\ \@instCity, \@instState\ -- \@instCountry \\ \@publyear
 		\@instCampus \\ \@instCity, \@instState\ -- \@instCountry \\ \DTMfetchyear{defDate}
 	\end{spacing}
 
@@ -580,7 +576,6 @@
 			
 			\begin{spacing}{1.0}
 				\Large{\finalpaper \\
-				%\@publyear}
 				\DTMfetchyear{defDate}}
 			\end{spacing}
 			
@@ -635,7 +630,6 @@
 						\setlength{\baselineskip}{0.7\baselineskip}
 						\noindent\@authorLast, \@authorFirst\par
 						\@title\ / \@authorFirst\ \@authorLast.			\\
-						%\noindent \@instCity, \@publyear.\par
 						\noindent \@instCity, \DTMfetchyear{defDate}.\par
 						\NumPenultimaPagina f.\par
 						\vspace{\baselineskip}
@@ -658,7 +652,6 @@
 	\begin{onehalfspacing}
 		{
 			\setlength{\baselineskip}{0.7\baselineskip}
-			%\MakeUppercase{\@authorLast}, \@authorFirst. \textbf{\@title}. \@publyear.
 			\MakeUppercase{\@authorLast}, \@authorFirst. \textbf{\@title}. \DTMfetchyear{defDate}.
 			\NumPenultimaPagina f. \ifthenelse{\equal{\itaoptionlevel}{tg}}{\itaciptg2babel}{\itacip2babel} \\
 		}
@@ -676,7 +669,6 @@
 			\setlength{\baselineskip}{0.7\baselineskip}
 			{\footnotesize \itacipauthorname}{\normalsize \@authorFirst\ \@authorLast} \\
 			{\footnotesize \itacipworktitlebabel} {\normalsize \@title.} 				\\
-			%{\footnotesize \itacipworktype} {\normalsize\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itatglevel}{\itaworklevel} / \@publyear}
 			{\footnotesize \itacipworktype} {\normalsize\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itatglevel}{\itaworklevel} / \DTMfetchyear{defDate}}
 			\\
 		}
@@ -745,11 +737,9 @@
 				 \vspace*{\stretch{2}}
 				
 				 \if@eng
-						%\small{\@instCity: \@publmonth\ \@publday, \@publyear.}
 						\small{\@instCity: \DTMusedate{defDate}.}
 				 \else
-						%\small{\@instCity, \@publday\ de \@publmonth\ de \@publyear.}
-						\small{\@instCity, {\selectlanguage{portuguese} \DTMusedate{mydate}}}
+						\small{\@instCity, {\selectlanguage{portuguese} \DTMusedate{defDate}}}
 				 \fi
 				
 			 \end{center}
@@ -1458,7 +1448,7 @@
 		\multicolumn{ 4}{|l|}{$^{10.}$ {\scriptsize APRESENTAÇÃO:}  \hfill 
 		(\N) \textbf{Nacional} \ \ \ 
 		(\I) \textbf{Internacional} } \\
-		\multicolumn{ 4}{|p{17cm}|}{\DTMsetdatestyle{ddmmyyyy} \DTMsetup{datesep=/} \FRDitapalavraapresentacaobabel} \\[\esp]
+		\multicolumn{ 4}{|p{17cm}|}{\DTMsetdatestyle{ddmmyyyy} \DTMsetup{datesep=/} \ifthenelse{\equal{\itaoptionlevel}{tg}}{\FRDitapalavraapresentacaotgbabel}{\FRDitapalavraapresentacaobabel}} \\[\esp]
 		\hline
 		\multicolumn{ 4}{|l|}{$^{11.}$ \scriptsize RESUMO:} \\
 		\multicolumn{ 4}{|c|}{\parbox[t][12cm]{.95\textwidth}{\FDRitaabstractcontent}} \\[\esp]

@@ -156,4 +156,6 @@
 
 \gdef\FRDitaorgaointernobabel{\@instFull\ -- \@instAbbr}
 
+\gdef\FRDitapalavraapresentacaotgbabel{Trabalho de Graduação, \@instAbbr, \@instCity, \DTMfetchyear{defDate}. \NumPenultimaPagina\ páginas.}
+
 \gdef\FRDitapalavraapresentacaobabel{\@instAbbr, \@instCity. Curso de \itaoptioncourse. Programa de Pós-Graduação em \itaworkcourse. Área de \itaworkarea. \advisorRole: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em \DTMusedate{defDate}. Publicada em \DTMusedate{publDate}.}

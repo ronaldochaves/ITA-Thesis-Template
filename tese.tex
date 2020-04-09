@@ -37,7 +37,7 @@
 %	\documentclass[dsc, eng, dv]{ita}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\documentclass[msc]{ita}    % ITA.cls based on standard book.cls 
+\documentclass[tg]{ita}    % ITA.cls based on standard book.cls 
 % Quando alterar a classe, por exemplo de [msc] para [msc, eng]) rode mais uma vez o botão BUILD OUTPUT caso haja erro
 \usepackage{ae}
 \usepackage{graphicx}
@@ -103,7 +103,7 @@
 \examiner{Prof. Dr.}{Donald Duck}{}{DYSNEY}
 \examiner{Prof. Dr.}{Mickey Mouse}{}{DISNEY}
 
-% Data da defesa/qualificação/seminário de tese
+% Data da defesa/qualificação/seminário de tese ({dd}{mm}{aaaa})
 \date{5}{3}{2015}
 
 % Número CDU (somente para TG)
@@ -137,7 +137,7 @@ Aos amigos da Graduação e Pós-Graduação do ITA por motivarem tanto a criação des
 {\sffamily\itshape
 ``If I have seen farther than others,\\
 it is because I stood on the shoulders of giants.''\\}
---- \textsc{Sir~Isaac Newton}
+--- \textsc{Sir Isaac Newton}
 \end{spacing}
 \end{flushright}
 
@@ -163,7 +163,7 @@ it is because I stood on the shoulders of giants.''\\}
 \listofabbreviations
 \input{Cap0/listaabreviaturas} 		% Opcional
 
-% Lista de simbolos
+% Lista de símbolos
 \listofsymbols
 \input{Cap0/listasimbolos} 			% Opcional
 
@@ -205,16 +205,10 @@ it is because I stood on the shoulders of giants.''\\}
 
 % Folha de Registro do Documento
 % Valores dos campos do formulário
-\FRDitadata{25}{03}{2015}						% Data da publicação no ITA.
-\FRDitadocnro{DCTA/ITA/DM-018/2015} 			% Número de registro fornecido pela biblioteca
-%\FRDitaorgaointerno{\@instFull~-- \@instAbbr}
-%Exemplo no caso de pós-graduação: \@instFull -- \@instAbbr
+\FRDitadata{25}{03}{2015}							% Data da publicação no ITA ({dd}{mm}{aaaa}).
+\FRDitadocnro{DCTA/ITA/DM-018/2015} 				% Número de registro fornecido pela biblioteca
 \FRDitapalavrasautor{Cupim; Cimento; Estruturas}
 \FRDitapalavrasresult{Cupim; Dilema; Construção}
-%Exemplo no caso de graduação (TG):
-%\FRDitapalavraapresentacao{Trabalho de Graduação, \@instAbbr, \@instCity, 2015. \NumPenultimaPagina\ páginas.}
-%Exemplo no caso de pós-graduação (msc, dsc):
-%\FRDitapalavraapresentacao{'\@instAbbr', \@instCity. Curso de Mestrado. Programa de Pós-Graduação em Engenharia Aeronáutica e Mecânica. Área de Sistemas Aeroespaciais e Mecatrônica. Orientador: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em 05/03/2015. Publicada em 25/03/2015.}
 \FRDitaresumo{\input{Cap0/resumo}}
 
 %  Primeiro parâmetro: Nacional ou Internacional -- N/I

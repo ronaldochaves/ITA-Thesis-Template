@@ -148,11 +148,7 @@
 \gdef\itaciptitlebabel{Dados Internacionais de Catalogação-na-Publicação (CIP)}
 \gdef\itacipbibbabel{Divisão de Informação e Documentação}
 
-%\gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. Área de \itaworkarea\ -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
-
 \gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. Área de \itaworkarea\ -- \@instFull, \DTMfetchyear{defDate}. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
-	
-%\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- \@instFull, \@publyear. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 
 \gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- \@instFull, \DTMfetchyear{defDate}. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 
@@ -167,12 +163,12 @@
 \gdef\itacipworktitlebabel{TÍTULO DO TRABALHO:}
 \gdef\itacipworktype{TIPO DO TRABALHO/ANO:}
 
-\gdef\itacesdirtextbabel{É concedida ao \@instFull\ permissão para reproduzir cópias desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
+\gdef\itacesdirtextbabel{É concedida ao \@instFull\ permissão para reproduzir cópias desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de publicação e nenhuma parte desta \ifthenelse{\equal{\itaoptionlevel}{quali}}{exame de qualificação}{\ifthenelse{\equal{\itaoptionlevel}{msc}}{dissertação}{tese}} pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
 
 \gdef\itacesdirtgtextbabel{É concedida ao \@instFull\ permissão para reproduzir cópias deste trabalho de graduação e para emprestar ou vender cópias somente para propósitos acadêmicos e científicos. \ifthenelse{\equal{\@authorGender}{masc}}{O autor}{A autora} reserva outros direitos de  publicação e nenhuma parte deste trabalho de graduação pode ser reproduzida sem a autorização \ifthenelse{\equal{\@authorGender}{masc}}{do autor}{da autora}.}
 
 \gdef\FRDitaorgaointernobabel{\@instFull\ -- \@instAbbr}
 
-%\gdef\FRDitapalavraapresentacaobabel{\@instAbbr, \@instCity. Curso de \itaoptioncourse. Programa de Pós-Graduação em \itaworkcourse. Área de \itaworkarea. \advisorRole: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em \@publday/\@publmonth/\@publyear. Publicada em \@FRDday/\@FRDmonth/\@FRDyear.}
+\gdef\FRDitapalavraapresentacaotgbabel{Trabalho de Graduação, \@instAbbr, \@instCity, \DTMfetchyear{defDate}. \NumPenultimaPagina\ páginas.}
 
 \gdef\FRDitapalavraapresentacaobabel{\@instAbbr, \@instCity. Curso de \itaoptioncourse. Programa de Pós-Graduação em \itaworkcourse. Área de \itaworkarea. \advisorRole: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em \DTMusedate{defDate}. Publicada em \DTMusedate{publDate}.}
