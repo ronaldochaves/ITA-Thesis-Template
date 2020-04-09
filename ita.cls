@@ -668,7 +668,7 @@
 		{\normalsize\textbf{\itacedirnamebabel}} \par
 		{
 			\setlength{\baselineskip}{0.7\baselineskip}
-			{\footnotesize \itacipauthorname}{\normalsize \@authorFirst\ \@authorLast} \\
+			{\footnotesize \itacipauthorname} {\normalsize \@authorFirst\ \@authorLast} \\
 			{\footnotesize \itacipworktitlebabel} {\normalsize \@title.} 				\\
 			{\footnotesize \itacipworktype} {\normalsize\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itatglevel}{\itaworklevel} / \DTMfetchyear{defDate}}
 			\\
