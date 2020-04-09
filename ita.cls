@@ -1,4 +1,5 @@
 % !TeX encoding = ISO-8859-1
+
 %==============================================================================
 % This is the ITA LateX class - classe de documento com padrões do ITA
 % written by
@@ -121,11 +122,11 @@
 \RequirePackage{ifthen}
 
 \if@eng
-	\RequirePackage[english, portuguese]{babel}
+	\RequirePackage[english]{babel}
 	\input{itaeng.babel}
 \else
 	% Comandos em português (e.g. faz \chapter virar Capítulo no texto) e hifenização correta
-	\RequirePackage[portuguese]{babel}
+	\RequirePackage[english, portuguese]{babel}
 	\input{itabr.babel}
 \fi
 
@@ -826,7 +827,7 @@
 %%% Redefinição de chapter
 %==============================================================================
 \renewcommand\chapter{
-	
+
 	\if@openright
 		\cleardoublepage
 	\else

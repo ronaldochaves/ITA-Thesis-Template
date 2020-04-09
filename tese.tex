@@ -1,4 +1,5 @@
 % !TeX encoding = ISO-8859-1
+
 %%% Exemplo de utilização da classe ITA
 %%%
 %%%   por        Fábio Fagundes Silveira   -  ffs [at] ita [dot] br
@@ -11,9 +12,9 @@
 %%%    	         Tarcisio A. B. Gripp      -  tarcisio.gripp [at] gmail [dot] com
 %%%
 %%%
-%%%  IMPORTANTE: O texto contido neste exemplo nao significa absolutamente nada.  :-)
+%%%  IMPORTANTE: O texto contido neste exemplo não significa absolutamente nada.  :-)
 %%%              O intuito aqui é demonstrar os comandos criados na classe e suas
-%%%              respectivas utilizacoes.
+%%%              respectivas utilizações.
 %%%
 %%%  Tese.tex  2016-08-25
 %%%  $HeadURL: http://www.apgita.org.br/apgita/teses-e-latex.php $
@@ -30,14 +31,14 @@
 %   				msc     		= Dissertação de Mestrado
 %   				dsc      		= Tese de Doutorado
 %   				quali    		= Exame de Qualificação
-% Para 'Draft Version'/'Versão Preliminar' com data no rodapé, adicionar 'dv':
-%   \documentclass[dsc, dv]{ita} 
+% Para 'Draft Version'/'Versão Preliminar' com data no rodapé, adicionar 'draft':
+%   \documentclass[dsc, draft]{ita} 
 % Para trabalhos em Inglês, adicionar 'eng':
 %   \documentclass[dsc, eng]{ita}
-%	\documentclass[dsc, eng, dv]{ita}
+%	\documentclass[dsc, eng, draft]{ita}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\documentclass[tg]{ita}    % ITA.cls based on standard book.cls 
+\documentclass[msc]{ita}    % ita.cls based on standard book.cls 
 % Quando alterar a classe, por exemplo de [msc] para [msc, eng]) rode mais uma vez o botão BUILD OUTPUT caso haja erro
 \usepackage{ae}
 \usepackage{graphicx}
@@ -103,7 +104,7 @@
 \examiner{Prof. Dr.}{Donald Duck}{}{DYSNEY}
 \examiner{Prof. Dr.}{Mickey Mouse}{}{DISNEY}
 
-% Data da defesa/qualificação/seminário de tese ({dd}{mm}{aaaa})
+% Data da defesa/qualificação/seminário de tese ({dia}{mês}{ano})
 \date{5}{3}{2015}
 
 % Número CDU (somente para TG)
@@ -119,8 +120,7 @@
 
 % Dedicatória: Não esqueça essa seção  ... :-)
 \begin{itadedication}
-Aos amigos da Graduação e Pós-Graduação do ITA por motivarem tanto a criação deste template pelo Fábio Fagundes Silveira quanto por motivarem a mim e outras pessoas a atualizarem e aprimorarem este excelente trabalho.
-
+\input{Cap0/dedicatoria}
 \end{itadedication}
 
 % Agradecimentos
