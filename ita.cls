@@ -284,16 +284,6 @@
 }
 
 % Coorientador (opcional)
-%\newcommand{\coadvisor}[4][\itacoadvisorwordbabel]{
-%	\gdef\@itacoadvisorname{#3}
-%	\gdef\@itacoadvisortitle{#2}
-%	\gdef\@itacoadvisorinst{#4}
-%	\gdef\@coadvisortg{#1 \\ #2~#3 (#4)}
-%	\gdef\@coadvisor{#2~#3 \\ #1}
-%	\gdef\itacoadvisorwordbabelll{#1}
-%}
-
-% Coorientador (opcional)
 \newcommand{\coadvisor}[5]{
 	\gdef\coadvisorCarrer{#1}
 	\gdef\coadvisorDegree{#2}
