@@ -71,7 +71,7 @@
 \gdef\namecover{Capa}
 \gdef\listofabbreviationsname{Lista de Abreviaturas e Siglas}
 \gdef\listofsymbolsname{Lista de Símbolos}
-\gdef\nameepigraphe{Epígrafe}
+\gdef\nameepigraph{Epígrafe}
 \gdef\namededicatory{Dedicatória}
 \gdef\nameacknowledgment{Agradecimentos}
 \gdef\nameabstract{Resumo}
@@ -95,22 +95,21 @@
 \gdef\@authorwordbabel{Autor}							      % {Autor}
 \gdef\itaauthoraddressbabel{Rua Tal, xxx}                     % {Rua Tal, xxx}
 
+% Orientador
 \gdef\advisorNamebabel{Nome d\ifthenelse{\equal{\advisorGender}{masc}}{o}{a} Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}}                     
 
-% Nome do Orientador
-\gdef\advisorTitlebabel{Prof\ifthenelse{\equal{\advisorGender}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\advisorGender}{masc}}{}{a}.}
-	
-% Orientador																										
+\gdef\advisorTitlebabel{Prof\ifthenelse{\equal{\advisorGender}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\advisorGender}{masc}}{}{$^\textnormal{a}$}.}
+			
 \gdef\itaadvisorwordbabel{Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}}
-																													
-\gdef\itacoadvisornamebabel{Nome d\ifthenelse{\equal{\coadvisorgendermf}{masc}}{o}{a} Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}}
 
-% Nome do Coorientador
-\gdef\itacoadvisortitlebabel{Prof\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}.}																				    
+% Coorientador		
+\gdef\coadvisorNamebabel{Nome d\ifthenelse{\equal{\coadvisorGender}{masc}}{o}{a} Coorientador\ifthenelse{\equal{\coadvisorGender}{masc}}{}{a}}
 
-% Coorientador
-\gdef\itacoadvisorwordbabel{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}}
+\gdef\coadvisorTitlebabel{Prof\ifthenelse{\equal{\coadvisorGender}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\coadvisorGender}{masc}}{}{$^\textnormal{a}$}.}
 
+\gdef\itacoadvisorwordbabel{Coorientador\ifthenelse{\equal{\coadvisorGender}{masc}}{}{a}}
+
+% Boss
 \gdef\itabossnamebabel{Nome d\ifthenelse{\equal{\bossgendermf}{masc}}{o}{a} Pró-Reitor\ifthenelse{\equal{\bossgendermf}{masc}}{}{a} de Pós-Graduação e Pesquisa} 
 
 % Nome do Pró-Reitor de Pós-Graduação e Pesquisa
@@ -135,7 +134,7 @@
 
 \gdef\authorGendermfbabel{mf}                              				  % masc ou fem
 \gdef\advisorGendermfbabel{mf}                            					 % masc ou fem
-\gdef\coadvisorgendermfbabel{mf}                          					 % masc ou fem
+\gdef\coadvisorGendermfbabel{mf}                          					 % masc ou fem
 \gdef\bossgendermfbabel{mf}                               					 % masc ou fem
 \gdef\bosscoursegendermfbabel{mf}                         					 % masc ou fem
 
@@ -148,9 +147,9 @@
 \gdef\itaciptitlebabel{Dados Internacionais de Catalogação-na-Publicação (CIP)}
 \gdef\itacipbibbabel{Divisão de Informação e Documentação}
 
-\gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. Área de \itaworkarea\ -- \@instFull, \DTMfetchyear{defDate}. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
+\gdef\itacipdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse. Área de \itaworkarea\ -- \@instFull, \DTMfetchyear{defDate}. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorGender}{masc}}{}{a}: \coadvisorTitle\ \coadvisorName.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 
-\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- \@instFull, \DTMfetchyear{defDate}. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorgendermf}{masc}}{}{a}: \@itacoadvisortitle\ \@itacoadvisorname.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
+\gdef\itaciptgdata1babel {\itaworklevel\ de \itaoptioncourse\ -- Curso de \itaworkcourse -- \@instFull, \DTMfetchyear{defDate}. Orientador\ifthenelse{\equal{\advisorGender}{masc}}{}{a}: \advisorTitle\ \advisorName. \@ifundefined{@coadvisor}{}{Coorientador\ifthenelse{\equal{\coadvisorGender}{masc}}{}{a}: \coadvisorTitle\ \coadvisorName.}\par \vspace{\baselineskip} \@cipkw\ I. \@instFull. II.~Título.\par}
 
 \gdef\itarefbibnamecipbabel{REFERÊNCIA BIBLIOGRÁFICA}
 
@@ -171,4 +170,4 @@
 
 \gdef\FRDitapalavraapresentacaotgbabel{Trabalho de Graduação, \@instAbbr, \@instCity, \DTMfetchyear{defDate}. \NumPenultimaPagina\ páginas.}
 
-\gdef\FRDitapalavraapresentacaobabel{\@instAbbr, \@instCity. Curso de \itaoptioncourse. Programa de Pós-Graduação em \itaworkcourse. Área de \itaworkarea. \advisorRole: \advisorTitle~\advisorName. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em \DTMusedate{defDate}. Publicada em \DTMusedate{publDate}.}
+\gdef\FRDitapalavraapresentacaobabel{\@instAbbr, \@instCity. Curso de \itaoptioncourse. Programa de Pós-Graduação em \itaworkcourse. Área de \itaworkarea. \advisorRole: \advisorTitle~\advisorName. \coadvisorRole: \coadvisorTitle~\coadvisorName. Defesa em \DTMusedate{defDate}. Publicada em \DTMusedate{publDate}.}

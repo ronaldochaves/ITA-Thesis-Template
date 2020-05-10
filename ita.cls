@@ -271,7 +271,7 @@
 %}
 
 % Orientador
-\newcommand{\advisor}[5][Prof.]{     		% [word], title, name
+\newcommand{\advisor}[5]{     		% [word], title, name
 	\gdef\advisorCarrer{#1}
 	\gdef\advisorDegree{#2}
 	\renewcommand{\advisorName}{#3}
@@ -284,13 +284,26 @@
 }
 
 % Coorientador (opcional)
-\newcommand{\coadvisor}[4][\itacoadvisorwordbabel]{
-	\gdef\@itacoadvisorname{#3}
-	\gdef\@itacoadvisortitle{#2}
-	\gdef\@itacoadvisorinst{#4}
-	\gdef\@coadvisortg{#1 \\ #2~#3 (#4)}
-	\gdef\@coadvisor{#2~#3 \\ #1}
-	\gdef\itacoadvisorwordbabelll{#1}
+%\newcommand{\coadvisor}[4][\itacoadvisorwordbabel]{
+%	\gdef\@itacoadvisorname{#3}
+%	\gdef\@itacoadvisortitle{#2}
+%	\gdef\@itacoadvisorinst{#4}
+%	\gdef\@coadvisortg{#1 \\ #2~#3 (#4)}
+%	\gdef\@coadvisor{#2~#3 \\ #1}
+%	\gdef\itacoadvisorwordbabelll{#1}
+%}
+
+% Coorientador (opcional)
+\newcommand{\coadvisor}[5]{
+	\gdef\coadvisorCarrer{#1}
+	\gdef\coadvisorDegree{#2}
+	\renewcommand{\coadvisorName}{#3}
+	\gdef\coadvisorGender{#4}
+	\gdef\coadvisorInst{#5}
+	\gdef\coadvisorRole{\itacoadvisorword}
+	\renewcommand{\coadvisorTitle}{\coadvisorCarrer~\coadvisorDegree}
+	\gdef\@coadvisor{\coadvisorTitle~\coadvisorName \\ \coadvisorRole}
+	\gdef\@coadvisorTG{\coadvisorRole \\ \coadvisorTitle~\coadvisorName\ (\coadvisorInst)}
 }
 
 % Pró-Reitor de Pós-Graduação e Pesquisa
@@ -314,7 +327,9 @@
 	\renewcommand{\itaworkcourse}{#1}
 }
 
-% Área do Curso
+% Área do Curso													    
+
+% Coorientador
 \newcommand{\area}[1]{
 	\renewcommand{\itaworkarea}{#1}
 }
@@ -329,9 +344,9 @@
 %  \renewcommand{\advisorgendermf}{#1}
 %}
 % Sexo do coorientador...
-\newcommand{\coadvisorgender}[1]{
-   \renewcommand{\coadvisorgendermf}{#1}
-}
+%\newcommand{\coadvisorgender}[1]{
+%   \renewcommand{\coadvisorgendermf}{#1}
+%}
 % Sexo do Pró-reitor da Pós-graduação
 \newcommand{\bossgender}[1]{
   \renewcommand{\bossgendermf}{#1}
@@ -348,28 +363,18 @@
 
 \renewcommand{\maketitle}{%
    \begin{titlepage}
-      \ifthenelse{\equal{\itaoptionlevel}{tg}}
-							{\maketgcover}
-							{}
-						
-			\pdfbookmark[0]{\nametitlepage}{titulo}
+      \ifthenelse{\equal{\itaoptionlevel}{tg}}{\maketgcover}{}
+      \pdfbookmark[0]{\nametitlepage}{titulo}
+      
       % verifica se é uma tese ou um exame de qualificação
-      \ifthenelse{\equal{\itaoptionlevel}{quali}}
-              {\thequalititlepage}
-							{\ifthenelse{\equal{\itaoptionlevel}{tg}}
-										{\thetgtitlepage}
-										{\thethesistitlepage}
-							}
+      \ifthenelse{\equal{\itaoptionlevel}{quali}}{\thequalititlepage}{\ifthenelse{\equal{\itaoptionlevel}{tg}}{\thetgtitlepage}{\thethesistitlepage}}
    \end{titlepage}
 
-   \ifthenelse{\equal{\itaoptionlevel}{quali}}
-              {\setcounter{page}{2}}
-							{\setcounter{page}{4}}
-							
+   \ifthenelse{\equal{\itaoptionlevel}{quali}}{\setcounter{page}{2}}{\setcounter{page}{4}}	
 }
 
 %==============================================================================
-% Folha de Rosto do Exame de Qualificacao para Doutorado
+% Folha de Rosto do Exame de Qualificação para Doutorado
 %==============================================================================
 \newcommand{\thequalititlepage}{
 	
@@ -462,7 +467,7 @@
 	\@ifundefined{@coadvisor}{}{      			% Co-advisor é opcional
 		\vspace*{\stretch{2}}
 		\begin{spacing}{1.5}
-			\@coadvisortg
+			\@coadvisorTG
 		\end{spacing}
 	}
 
@@ -721,14 +726,14 @@
 				 \small{\advisorName\ (\advisorInst)
 				 \par
 				 \advisorRole}
-         \vspace*{\stretch{1}}
+         		 \vspace*{\stretch{1}}
 			 		
 				 \@ifundefined{@coadvisor}{}{      % Co-advisor eh opcional
 			 	 \hspace{3cm}\hrulefill\hspace{3cm}
 				 \par 
-				 \small{\@itacoadvisorname\ (\@itacoadvisorinst )
+				 \small{\coadvisorName\ (\coadvisorInst)
 				 \par
-				 \itacoadvisorwordbabelll}
+				 \coadvisorRole}
 				 \vspace*{\stretch{1}}
 				 }
 				
@@ -775,13 +780,16 @@
 	\thispagestyle{empty}%
 	\pdfbookmark[0]{\namededicatory}{dedication}
 	\begin{flushright}%
-	\null\vfil \@beginparpenalty\@lowpenalty
-	\vspace{120mm}
-	\hspace{80mm}
-	\begin{minipage}[b]{0.45\textwidth}\begin{spacing}{1.5}
+		\null\vfil \@beginparpenalty\@lowpenalty
+		\vspace{120mm}
+		\hspace{80mm}
+		\begin{minipage}[b]{0.45\textwidth}
+			\begin{spacing}{1.5}
 }
 {
-	\end{spacing}\end{minipage}\end{flushright}\par\vfil\null\newpage
+			\end{spacing}
+		\end{minipage}
+	\end{flushright}\par\vfil\null\newpage
 }
 
 %==============================================================================
@@ -801,6 +809,24 @@
 }
 {
 	\par\vfil\null\newpage
+}
+
+%==============================================================================
+%%% Epígrafe
+%==============================================================================
+\newenvironment{itaepigraph}{
+	\thispagestyle{empty}%
+	\ifhyperref\pdfbookmark[0]{\nameepigraph}{epigraph}\fi
+	\begin{flushright}%
+		\begin{spacing}{1}
+			\mbox{}\vfill
+			{\sffamily\itshape
+}
+{
+			}
+			\\ --- \textsc{Sir Isaac Newton}
+		\end{spacing}
+	\end{flushright}\par\vfil\null\newpage
 }
 
 %==============================================================================
@@ -872,7 +898,7 @@
 	\sloppy
 	\clubpenalty4000
 	\@clubpenalty \clubpenalty
-	\widowpenalty4000%
+	\widowpenalty4000%Y
 	\sfcode`\.\@m
 }
 {
@@ -1097,9 +1123,9 @@
 	\begin{tabular}{l l l l}
 		\@ifundefined{metitlea}{}{\metitlea\@ & \menamea\@ & \hspace{1cm} \merolea\@ & - \hspace{0.5cm} \meinsta\@} \\
 		
-		\advisorTitle & \advisorName & \hspace{1cm} \advisorRole & - \hspace{0.5cm} \@instAbbr \\
+		\advisorTitle & \advisorName & \hspace{1cm} \advisorRole & - \hspace{0.5cm} \advisorInst \\
 		
-		\@ifundefined{@coadvisor}{}{\@itacoadvisortitle & \@itacoadvisorname & \hspace{1cm} \itacoadvisorwordbabelll & - \hspace{0.5cm} \@itacoadvisorinst \\}
+		\@ifundefined{@coadvisor}{}{\coadvisorTitle & \coadvisorName & \hspace{1cm} \coadvisorRole & - \hspace{0.5cm} \coadvisorInst \\}
 		
 		\@ifundefined{metitleb}{}{\metitleb\@ & \menameb\@ & \hspace{1cm} \meroleb\@ & - \hspace{0.5cm} \meinstb\@} \\
 		

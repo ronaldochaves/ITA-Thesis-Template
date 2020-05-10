@@ -17,12 +17,12 @@
 \newcommand{\bossgendermf}{\bossgendermfbabel}              % masc ou fem
 \newcommand{\bosscoursegendermf}{\bosscoursegendermfbabel}  % masc ou fem
 	
-\newcommand{\advisorName}{\advisorNamebabel}       	% {Nome do Orientador}
-\newcommand{\advisorTitle}{\advisorTitlebabel}     	% {Prof.~Dr.}
+\newcommand{\advisorName}{\advisorNamebabel}       			% {Nome do Orientador}
+\newcommand{\advisorTitle}{\advisorTitlebabel}     			% {Prof.~Dr.}
 \newcommand{\itaadvisorword}{\itaadvisorwordbabel}       	% {Orientador}
 
-\newcommand{\itacoadvisorname}{\itacoadvisornamebabel}   	% {Nome do Coorientador}
-\newcommand{\itacoadvisortitle}{\itacoadvisortitlebabel} 	% {Prof.~Dr.}
+\newcommand{\coadvisorName}{\coadvisorNamebabel}   			% {Nome do Coorientador}
+\newcommand{\coadvisorTitle}{\coadvisorTitlebabel} 			% {Prof.~Dr.}
 \newcommand{\itacoadvisorword}{\itacoadvisorwordbabel}   	% {Coorientador}
 	
 \newcommand{\itabossname}{\itabossnamebabel}             	% {Nome do Chefe da Divisão de Pós-graduação}
