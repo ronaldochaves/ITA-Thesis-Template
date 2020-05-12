@@ -25,8 +25,8 @@
 \newcommand{\coadvisorTitle}{\coadvisorTitlebabel} 			% {Prof.~Dr.}
 \newcommand{\itacoadvisorword}{\itacoadvisorwordbabel}   	% {Coorientador}
 	
-\newcommand{\itabossname}{\itabossnamebabel}             	% {Nome do Chefe da Divisão de Pós-graduação}
-\newcommand{\itabosstitle}{\itabosstitle}                	% {Prof.~Dr.}
+\newcommand{\bossName}{\bossNamebabel}             			% {Nome do Chefe da Divisão de Pós-graduação}
+\newcommand{\bossTitle}{\bossTitlebabel}              		% {Prof.~Dr.}
 \newcommand{\itabossword}{\itabosswordbabel}             	% {Chefe da Divisão de Pós-graduação}
 
 \newcommand{\itabosscoursename}{\itabosscoursenamebabel}	% {Nome do coordenador do curso de graduação}

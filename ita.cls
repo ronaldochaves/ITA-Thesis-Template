@@ -286,11 +286,14 @@
 }
 
 % Pró-Reitor de Pós-Graduação e Pesquisa
-\newcommand{\boss}[3][\itabosswordbabel]{      				% [word], title, name
-	\renewcommand{\itabossname}{#3}
-	\renewcommand{\itabosstitle}{#2}
-	\renewcommand{\itabossword}{#1}
-	\gdef\@boss {#2~#3 \\ #1}
+\newcommand{\boss}[4]{
+	\gdef\bossCarrer{#1}
+	\gdef\bossDegree{#2}
+	\renewcommand{\bossName}{#3}
+	\gdef\bossGender{#4}
+	\gdef\bossRole{\itabossword}
+	\renewcommand{\bossTitle}{\genderCarrer{\bossCarrer}{\bossGender}~\genderDegree{\bossDegree}{\bossGender}}
+	\gdef\@boss{\bossTitle~\bossName \\ \bossRole}
 }
 
 % Coordenador do curso de graduação
