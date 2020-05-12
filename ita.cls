@@ -260,17 +260,6 @@
 }
 
 % Orientador
-%\newcommand{\advisor}[4][\itaadvisorwordbabel]{     		% [word], title, name
-%	\renewcommand{\advisorName}{#3}
-%	\renewcommand{\advisorTitle}{#2}
-%	\gdef\advisorInst{#4}
-%	\renewcommand{\itaadvisorword}{#1}
-%	\gdef\@advisor{#2~#3 \\ #1}
-%	\gdef\@advisorTG{#1 \\ #2~#3 (#4)}
-%	\gdef\itaadvisorwordbabelll{#1}
-%}
-
-% Orientador
 \newcommand{\advisor}[5]{     		% [word], title, name
 	\gdef\advisorCarrer{#1}
 	\gdef\advisorDegree{#2}
