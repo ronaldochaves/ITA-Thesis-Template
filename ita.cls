@@ -267,7 +267,7 @@
 	\gdef\advisorGender{#4}
 	\gdef\advisorInst{#5}
 	\gdef\advisorRole{\itaadvisorword}
-	\renewcommand{\advisorTitle}{\advisorCarrer~\advisorDegree}
+	\renewcommand{\advisorTitle}{\genderCarrer{\advisorCarrer}{\advisorGender}~\genderDegree{\advisorDegree}{\advisorGender}}
 	\gdef\@advisor{\advisorTitle~\advisorName \\ \advisorRole}
 	\gdef\@advisorTG{\advisorRole \\ \advisorTitle~\advisorName\ (\advisorInst)}
 }
@@ -280,7 +280,7 @@
 	\gdef\coadvisorGender{#4}
 	\gdef\coadvisorInst{#5}
 	\gdef\coadvisorRole{\itacoadvisorword}
-	\renewcommand{\coadvisorTitle}{\coadvisorCarrer~\coadvisorDegree}
+	\renewcommand{\coadvisorTitle}{\genderCarrer{\coadvisorCarrer}{\coadvisorGender}~\genderDegree{\coadvisorDegree}{\coadvisorGender}}
 	\gdef\@coadvisor{\coadvisorTitle~\coadvisorName \\ \coadvisorRole}
 	\gdef\@coadvisorTG{\coadvisorRole \\ \coadvisorTitle~\coadvisorName\ (\coadvisorInst)}
 }

@@ -88,7 +88,7 @@
 \gdef\itapagedocregbabel{Folha de Registro do Documento}
 
 %--------------------------------------------------------
-%Defaults
+% Defaults
 %--------------------------------------------------------
 \gdef\@titlebabel{Título do Trabalho}                         % {Título do Trabalho}
 \gdef\@authorbabel{Nome do Autor}                             % {Nome do Autor}
@@ -124,6 +124,21 @@
 
 % Nome do coordenador do respectivo curso de graduação							                     
 \gdef\itabosscoursewordbabel{Coordenador\ifthenelse{\equal{\bosscoursegendermf}{masc}}{}{a} do Curso de \itaworkcourse}
+
+%--------------------------------------------------------
+% Comandos para correção de gênero
+%--------------------------------------------------------
+\newcommand{\genderCarrer}[2]{
+	\ifthenelse{\equal{#1}{Prof.}}
+	{Prof\ifthenelse{\equal{#2}{masc}}{.}{$^\textnormal{a}$.}}
+	{#1}%
+}
+
+\newcommand{\genderDegree}[2]{
+\ifthenelse{\equal{#1}{Dr.}}
+{Dr\ifthenelse{\equal{#2}{masc}}{.}{$^\textnormal{a}$.}}
+{#1}%
+}
 
 \gdef\itaworklevelbabel{(Documento)}                               % {(Documento)}
 \gdef\itaworkcoursebabel{(Curso)}                                  % {(Curso)}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.28)  11 MAY 2020 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.28)  11 MAY 2020 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,7 +1022,7 @@ Package `hyperref' Info: End of reference (cite) `cite.Sbornian2002', line 14.
 Package hyperref Info: Reference (cite) `cite.Arystides1994' on input line 23.
 Package hyperref Info: Reference (cite) `cite.Arystides1994' on input line 23.
 Package hyperref Info: Anchor `figure.caption.9' on input line 25.
-<Cap1/cupim.pdf, id=245, 233.87375pt x 221.82875pt>
+<Cap1/cupim.pdf, id=246, 233.87375pt x 221.82875pt>
 File: Cap1/cupim.pdf Graphic file (type pdf)
 <use Cap1/cupim.pdf>
 Package pdftex.def Info: Cap1/cupim.pdf  used on input line 27.
@@ -1048,7 +1048,7 @@ Package `hyperref' Info: End of reference (cite) `cite.Arystides1994', line 23.
 
  <./Cap1/cupim.pdf>]
 Package hyperref Info: Anchor `figure.caption.10' on input line 45.
-<Cap1/cupimconcreto.pdf, id=258, 401.5pt x 289.08pt>
+<Cap1/cupimconcreto.pdf, id=259, 401.5pt x 289.08pt>
 File: Cap1/cupimconcreto.pdf Graphic file (type pdf)
 <use Cap1/cupimconcreto.pdf>
 Package pdftex.def Info: Cap1/cupimconcreto.pdf  used on input line 47.
@@ -1163,7 +1163,7 @@ Package `hyperref' Info: End of reference (cite) `cite.Caromel1998', line 3.
 Package `hyperref' Info: End of reference (cite) `cite.Caromel1998', line 3.
 ]
 Package hyperref Info: Anchor `figure.caption.12' on input line 24.
-<Cap2/spiderrobot.JPG, id=308, 614.295pt x 462.22687pt>
+<Cap2/spiderrobot.JPG, id=309, 614.295pt x 462.22687pt>
 File: Cap2/spiderrobot.JPG Graphic file (type jpg)
 <use Cap2/spiderrobot.JPG>
 Package pdftex.def Info: Cap2/spiderrobot.JPG  used on input line 26.
@@ -1297,7 +1297,7 @@ pdftex: bookmark at 1: {A.1} {\numberline{A.1}Uma Primeira Se\c c\~ao para o Ap
 \^endice} {section.A.1} {1} {toc} 
 Package hyperref Info: Anchor `equation.A.1.1' on input line 6.
 Package hyperref Info: Anchor `figure.caption.14' on input line 14.
-<ApeA/pragas_ciclo_cupim.pdf, id=349, 401.5pt x 403.5075pt>
+<ApeA/pragas_ciclo_cupim.pdf, id=350, 401.5pt x 403.5075pt>
 File: ApeA/pragas_ciclo_cupim.pdf Graphic file (type pdf)
 <use ApeA/pragas_ciclo_cupim.pdf>
 Package pdftex.def Info: ApeA/pragas_ciclo_cupim.pdf  used on input line 16.
@@ -1375,13 +1375,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14218 strings out of 494296
- 238299 string characters out of 6168574
- 346907 words of memory out of 5000000
- 17038 multiletter control sequences out of 15000+600000
- 56857 words of font info for 109 fonts, out of 8000000 for 9000
+ 14226 strings out of 494296
+ 238365 string characters out of 6168574
+ 348063 words of memory out of 5000000
+ 17042 multiletter control sequences out of 15000+600000
+ 60503 words of font info for 113 fonts, out of 8000000 for 9000
  454 hyphenation exceptions out of 8191
- 54i,12n,77p,1081b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,12n,77p,1081b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -1400,7 +1400,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tese.pdf (28 pages, 450650 bytes).
+Output written on tese.pdf (28 pages, 451274 bytes).
 PDF statistics:
  455 PDF objects out of 1000 (max. 8388607)
  395 compressed objects within 4 object streams
