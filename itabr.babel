@@ -118,12 +118,12 @@
 \gdef\itabosswordbabel{Pró-Reitor\ifthenelse{\equal{\bossGender}{masc}}{}{a} de Pós-Graduação e Pesquisa}
 % Pró-Reitor de Pos-Graduacao e Pesquisa
 
-\gdef\itabosscoursenamebabel{Nome d\ifthenelse{\equal{\bosscoursegendermf}{masc}}{o}{a} Coordenador do Curso de \itaworkcourse}
+\gdef\bosscourseNamebabel{Nome d\ifthenelse{\equal{\bossGender}{masc}}{o}{a} Coordenador\ifthenelse{\equal{\bossGender}{masc}}{}{a} do Curso de \itaworkcourse}
 
-\gdef\itabosscoursetitle{Prof\ifthenelse{\equal{\bossGender}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\bossGender}{masc}}{}{a}.}
+\gdef\bosscourseTitlebabel{Prof\ifthenelse{\equal{\bossGender}{masc}}{}{$^\textnormal{a}$}.~Dr\ifthenelse{\equal{\bossGender}{masc}}{}{a}.}
 
 % Nome do coordenador do respectivo curso de graduação							                     
-\gdef\itabosscoursewordbabel{Coordenador\ifthenelse{\equal{\bosscoursegendermf}{masc}}{}{a} do Curso de \itaworkcourse}
+\gdef\itabosscoursewordbabel{Coordenador\ifthenelse{\equal{\bossGender}{masc}}{}{a} do Curso de \itaworkcourse}
 
 %--------------------------------------------------------
 % Comandos para correção de gênero

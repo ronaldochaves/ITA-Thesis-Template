@@ -260,7 +260,7 @@
 }
 
 % Orientador
-\newcommand{\advisor}[5]{     		% [word], title, name
+\newcommand{\advisor}[5]{				 % Profissão, Título, Nome, Gênero e Instituição
 	\gdef\advisorCarrer{#1}
 	\gdef\advisorDegree{#2}
 	\renewcommand{\advisorName}{#3}
@@ -273,7 +273,7 @@
 }
 
 % Coorientador (opcional)
-\newcommand{\coadvisor}[5]{
+\newcommand{\coadvisor}[5]{				 % Profissão, Título, Nome, Gênero e Instituição
 	\gdef\coadvisorCarrer{#1}
 	\gdef\coadvisorDegree{#2}
 	\renewcommand{\coadvisorName}{#3}
@@ -286,23 +286,23 @@
 }
 
 % Pró-Reitor de Pós-Graduação e Pesquisa
-\newcommand{\boss}[4]{
+\newcommand{\boss}[4]{					 % Profissão, Título, Nome e Gênero
 	\gdef\bossCarrer{#1}
 	\gdef\bossDegree{#2}
 	\renewcommand{\bossName}{#3}
 	\gdef\bossGender{#4}
-	\gdef\bossRole{\itabossword}
+	\gdef\bossRole{\ifthenelse{\equal{\itaoptionlevel}{tg}}{\itabosscourseword}{\itabossword}}
 	\renewcommand{\bossTitle}{\genderCarrer{\bossCarrer}{\bossGender}~\genderDegree{\bossDegree}{\bossGender}}
 	\gdef\@boss{\bossTitle~\bossName \\ \bossRole}
 }
 
 % Coordenador do curso de graduação
-\newcommand{\bosscourse}[3][\itabosscoursewordbabel]{		% [word], title, name
-	\renewcommand{\itabosscoursename}{#3}
-	\renewcommand{\itabosscoursetitle}{#2}
-	\renewcommand{\itabosscourseword}{#1}
-	\gdef\@bosscourse {#2~#3 \\ #1}
-}
+%\newcommand{\course}[3][\itabosscoursewordbabel]{		% [word], title, name
+%	\renewcommand{\itabosscoursename}{#3}
+%	\renewcommand{\itabosscoursetitle}{#2}
+%	\renewcommand{\itabosscourseword}{#1}
+%	\gdef\@bosscourse {#2~#3 \\ #1}
+%}
 
 % Curso de Graduação/Programa de Pós-Graduação
 \newcommand{\course}[1]{
@@ -330,13 +330,13 @@
 %   \renewcommand{\coadvisorgendermf}{#1}
 %}
 % Sexo do Pró-reitor da Pós-graduação
-\newcommand{\bossgender}[1]{
-  \renewcommand{\bossgendermf}{#1}
-}
+%\newcommand{\bossgender}[1]{
+%  \renewcommand{\bossgendermf}{#1}
+%}
 % Sexo do Coordenador do curso no caso de TG
-\newcommand{\bosscoursegender}[1]{
-  \renewcommand{\bosscoursegendermf}{#1}
-}
+%{\bosscoursegender}[1]{
+%  \renewcommand{\bosscoursegendermf}{#1}
+%}
 
 %==============================================================================
 %%% Hack: Página de Rosto para Teses
@@ -686,73 +686,68 @@
    \thispagestyle{empty}
 
    \noindent
-   
-	 \ifthenelse{\equal{\itaoptionlevel}{tg}}
-	     {
-			 \begin{spacing}{1.0}
-       \begin{center}
-         \itaformatworktitle{\MakeUppercase{\@title}}
-         \vfill
-         \small{\itathesisapprovedmemberstg}
-				 \vspace*{\stretch{3}}
-			 		 
-			 	 \hspace{3cm}\hrulefill\hspace{3cm}
-				 \par 
-				 \small{\@authorFirst\ \@authorLast
-				 \par
-				 \ifthenelse{\equal{\@authorGender}{masc}}{}{\if@eng \else a\fi}}
-				 \vspace*{\stretch{1}}
-			 		 
-			 	 \hspace{3cm}\hrulefill\hspace{3cm}
-				 \par 
-				 \small{\advisorName\ (\advisorInst)
-				 \par
-				 \advisorRole}
-         		 \vspace*{\stretch{1}}
-			 		
-				 \@ifundefined{@coadvisor}{}{      % Co-advisor eh opcional
-			 	 \hspace{3cm}\hrulefill\hspace{3cm}
-				 \par 
-				 \small{\coadvisorName\ (\coadvisorInst)
-				 \par
-				 \coadvisorRole}
-				 \vspace*{\stretch{1}}
-				 }
-				
-			 	 \hspace{3cm}\hrulefill\hspace{3cm}
-				 \par 
-				 \small{\@bosscourse}
-				 \vspace*{\stretch{2}}
-				
-				 \if@eng
-						\small{\@instCity: \DTMusedate{defDate}.}
-				 \else
-						\small{\@instCity, {\selectlanguage{portuguese} \DTMusedate{defDate}}}
-				 \fi
-				
-			 \end{center}
-			 \end{spacing}
+   \ifthenelse{\equal{\itaoptionlevel}{tg}}
+   {
+   		\begin{spacing}{1.0}
+   			\begin{center}
+				\itaformatworktitle{\MakeUppercase{\@title}}
+				\vfill
+				\small{\itathesisapprovedmemberstg}
+				\vspace*{\stretch{3}}
+				\hspace{3cm}\hrulefill\hspace{3cm}
+				\par 
+				\small{\@authorFirst\ \@authorLast
+				\par
+				\ifthenelse{\equal{\@authorGender}{masc}}{}{\if@eng \else a\fi}}
+				\vspace*{\stretch{1}}
+				 
+				\hspace{3cm}\hrulefill\hspace{3cm}
+				\par 
+				\small{\advisorTitle~\advisorName\ (\advisorInst)
+				\par
+				\advisorRole}
+				   		 \vspace*{\stretch{1}}
+				 		
+				\@ifundefined{@coadvisor}{}{      % Co-advisor é opcional
+				\hspace{3cm}\hrulefill\hspace{3cm}
+				\par 
+				\small{\coadvisorTitle~\coadvisorName\ (\coadvisorInst)
+				\par
+				\coadvisorRole}
+				\vspace*{\stretch{1}}
+				}
+					
+				\hspace{3cm}\hrulefill\hspace{3cm}
+				\par 
+				\small{\@boss}
+				\vspace*{\stretch{2}}
+					
+				\if@eng
+							\small{\@instCity: \DTMusedate{defDate}.}
+				\else
+							\small{\@instCity, {\selectlanguage{portuguese} \DTMusedate{defDate}}}
+				\fi
+			\end{center}
+		\end{spacing}
 			 
-			 } 
-	     {	
-	     \begin{spacing}{1.0}
-       \begin{center}
-         \itaformatworktitle{\MakeUppercase{\@title}}
-         \vfill
-         \itaformatauthorname{\@authorFirst\ \@authorLast}
-				 \vfill
-			 \end{center}
+	} 
+	{
+		\begin{spacing}{1.0}
+			\begin{center}
+				\itaformatworktitle{\MakeUppercase{\@title}}
+				\vfill
+				\itaformatauthorname{\@authorFirst\ \@authorLast}
+				\vfill
+			\end{center}
 			
-			 \raggedright{\normalsize{\namepageexaminers}}
-       \vfill
-    
-       \raggedright\@memberslist
-        
-       \end{spacing}
-       \vfill
-       \center
-       \large\textbf{\@instAbbr}
-       }
+			\raggedright{\normalsize{\namepageexaminers}}
+			\vfill
+			\raggedright\@memberslist
+		\end{spacing}
+		\vfill
+		\center
+		\large\textbf{\@instAbbr}
+	}
 }
 
 %==============================================================================

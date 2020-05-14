@@ -29,8 +29,8 @@
 \newcommand{\bossTitle}{\bossTitlebabel}              		% {Prof.~Dr.}
 \newcommand{\itabossword}{\itabosswordbabel}             	% {Chefe da Divisão de Pós-graduação}
 
-\newcommand{\itabosscoursename}{\itabosscoursenamebabel}	% {Nome do coordenador do curso de graduação}
-\newcommand{\itabosscoursetitle}{\itabosscoursetitle}       % {Prof.~Dr.}
+\newcommand{\bosscourseName}{\bosscourseNamebabel}	% {Nome do coordenador do curso de graduação}
+\newcommand{\bosscourseTitle}{\bosscourseTitlebabel}       % {Prof.~Dr.}
 \newcommand{\itabosscourseword}{\itabosscoursewordbabel}    % {Coordenador do curso de graduação}
 
 

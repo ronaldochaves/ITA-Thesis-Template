@@ -106,8 +106,8 @@
 \gdef\bossTitlebabel{Prof.~Dr.}                               			% {Prof.~Dr.}
 \gdef\itabosswordbabel{Dean for Graduate Education and Research}   		% {Pró-Reitor de Pós-Graduação e Pesquisa}
 
-\gdef\itabosscoursenamebabel{Name of the Course Coordinator of \itaworkcourse} %{Nome do coordenador do respectivo curso de graduação}
-\gdef\itabosscoursetitle{Prof.~Dr.}                                        %{Prof.~Dr.}
+\gdef\bosscourseNamebabel{Name of the Course Coordinator of \itaworkcourse} %{Nome do coordenador do respectivo curso de graduação}
+\gdef\bosscourseTitlebabel{Prof.~Dr.}                                        %{Prof.~Dr.}
 \gdef\itabosscoursewordbabel{Course Coordinator of \itaworkcourse}         %{Coordenador do respectivo curso de graduação}
 
 %--------------------------------------------------------
