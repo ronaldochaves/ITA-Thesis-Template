@@ -91,8 +91,10 @@
 % Defaults
 %--------------------------------------------------------
 \gdef\@titlebabel{Título do Trabalho}                         % {Título do Trabalho}
-\gdef\@authorbabel{Nome do Autor}                             % {Nome do Autor}
-\gdef\@authorwordbabel{Autor}							      % {Autor}
+
+% Autor
+\gdef\@authorbabel{Nome d\ifthenelse{\equal{\@authorGender}{masc}}{o}{a} Autor\ifthenelse{\equal{\@authorGender}{masc}}{}{a}}
+\gdef\@authorwordbabel{Autor\ifthenelse{\equal{\@authorGender}{masc}}{}{a}}
 \gdef\itaauthoraddressbabel{Rua Tal, xxx}                     % {Rua Tal, xxx}
 
 % Orientador

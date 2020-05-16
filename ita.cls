@@ -249,6 +249,7 @@
 	\gdef\@authorFirst{#1}
 	\gdef\@authorLast{#2}
 	\gdef\@authorGender{#3}
+	\gdef\@authorRole{\@authorword}
 }
 
 % Endereço do autor (utilizado no verso da folha de rosto)
@@ -694,11 +695,12 @@
 				\vfill
 				\small{\itathesisapprovedmemberstg}
 				\vspace*{\stretch{3}}
+				
 				\hspace{3cm}\hrulefill\hspace{3cm}
 				\par 
 				\small{\@authorFirst\ \@authorLast
 				\par
-				\ifthenelse{\equal{\@authorGender}{masc}}{}{\if@eng \else a\fi}}
+				\@authorRole}
 				\vspace*{\stretch{1}}
 				 
 				\hspace{3cm}\hrulefill\hspace{3cm}
@@ -706,7 +708,7 @@
 				\small{\advisorTitle~\advisorName\ (\advisorInst)
 				\par
 				\advisorRole}
-				   		 \vspace*{\stretch{1}}
+				\vspace*{\stretch{1}}
 				 		
 				\@ifundefined{@coadvisor}{}{      % Co-advisor é opcional
 				\hspace{3cm}\hrulefill\hspace{3cm}
