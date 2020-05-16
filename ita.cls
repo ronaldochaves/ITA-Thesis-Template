@@ -297,14 +297,6 @@
 	\gdef\@boss{\bossTitle~\bossName \\ \bossRole}
 }
 
-% Coordenador do curso de graduação
-%\newcommand{\course}[3][\itabosscoursewordbabel]{		% [word], title, name
-%	\renewcommand{\itabosscoursename}{#3}
-%	\renewcommand{\itabosscoursetitle}{#2}
-%	\renewcommand{\itabosscourseword}{#1}
-%	\gdef\@bosscourse {#2~#3 \\ #1}
-%}
-
 % Curso de Graduação/Programa de Pós-Graduação
 \newcommand{\course}[1]{
 	\renewcommand{\itaworkcourse}{#1}
@@ -321,23 +313,6 @@
 \newcommand{\cdu}[1]{
 	\renewcommand{\cdunumber}{#1}
 }
-
-% Sexo do orientador...
-%\newcommand{\advisorgender}[1]{
-%  \renewcommand{\advisorgendermf}{#1}
-%}
-% Sexo do coorientador...
-%\newcommand{\coadvisorgender}[1]{
-%   \renewcommand{\coadvisorgendermf}{#1}
-%}
-% Sexo do Pró-reitor da Pós-graduação
-%\newcommand{\bossgender}[1]{
-%  \renewcommand{\bossgendermf}{#1}
-%}
-% Sexo do Coordenador do curso no caso de TG
-%{\bosscoursegender}[1]{
-%  \renewcommand{\bosscoursegendermf}{#1}
-%}
 
 %==============================================================================
 %%% Hack: Página de Rosto para Teses
@@ -1090,35 +1065,38 @@
 %%% Membros da banca examinadora
 %==============================================================================
 \newcounter{mecounter}
-\newcommand{\examiner}[4]{
+\newcommand{\examiner}[6]{
 	\addtocounter{mecounter}{1}
-	\expandafter\gdef\csname metitle\alph{mecounter}\endcsname{#1}
-	\expandafter\gdef\csname mename\alph{mecounter}\endcsname{#2}
-	\expandafter\gdef\csname merole\alph{mecounter}\endcsname{#3}
-	\expandafter\gdef\csname meinst\alph{mecounter}\endcsname{#4}
+	\expandafter\gdef\csname meCarrer\alph{mecounter}\endcsname{#1}
+	\expandafter\gdef\csname meDegree\alph{mecounter}\endcsname{#2}
+	\expandafter\gdef\csname meName\alph{mecounter}\endcsname{#3}
+	\expandafter\gdef\csname meGender\alph{mecounter}\endcsname{#4}
+	\expandafter\gdef\csname meTitle\alph{mecounter}\endcsname{\genderCarrer{#1}{#4}~\genderDegree{#2}{#4}}
+	\expandafter\gdef\csname meRole\alph{mecounter}\endcsname{#5}
+	\expandafter\gdef\csname meInst\alph{mecounter}\endcsname{#6}
 }
 
 \newcommand{\@memberslist}{
 	\begin{tabular}{l l l l}
-		\@ifundefined{metitlea}{}{\metitlea\@ & \menamea\@ & \hspace{1cm} \merolea\@ & - \hspace{0.5cm} \meinsta\@} \\
+		\@ifundefined{meTitlea}{}{\meTitlea\@ & \meNamea\@ & \hspace{1cm} \meRolea\@ & - \hspace{0.5cm} \meInsta\@} \\
 		
 		\advisorTitle & \advisorName & \hspace{1cm} \advisorRole & - \hspace{0.5cm} \advisorInst \\
 		
 		\@ifundefined{@coadvisor}{}{\coadvisorTitle & \coadvisorName & \hspace{1cm} \coadvisorRole & - \hspace{0.5cm} \coadvisorInst \\}
 		
-		\@ifundefined{metitleb}{}{\metitleb\@ & \menameb\@ & \hspace{1cm} \meroleb\@ & - \hspace{0.5cm} \meinstb\@} \\
+		\@ifundefined{meTitleb}{}{\meTitleb\@ & \meNameb\@ & \hspace{1cm} \meRoleb\@ & - \hspace{0.5cm} \meInstb\@} \\
 		
-		\@ifundefined{metitlec}{}{\metitlec\@ & \menamec\@ & \hspace{1cm} \merolec\@ & - \hspace{0.5cm} \meinstc\@} \\
+		\@ifundefined{meTitlec}{}{\meTitlec\@ & \meNamec\@ & \hspace{1cm} \meRolec\@ & - \hspace{0.5cm} \meInstc\@} \\
 		
-		\@ifundefined{metitled}{}{\metitled\@ & \menamed\@ & \hspace{1cm} \meroled\@ & - \hspace{0.5cm} \meinstd\@} \\
+		\@ifundefined{meTitled}{}{\meTitled\@ & \meNamed\@ & \hspace{1cm} \meRoled\@ & - \hspace{0.5cm} \meInstd\@} \\
 		
-		\@ifundefined{metitlee}{}{\metitlee\@ & \menamee\@ & \hspace{1cm} \merolee\@ & - \hspace{0.5cm} \meinste\@} \\
+		\@ifundefined{meTitlee}{}{\meTitlee\@ & \meNamee\@ & \hspace{1cm} \meRolee\@ & - \hspace{0.5cm} \meInste\@} \\
 		
-		\@ifundefined{metitlef}{}{\metitlef\@ & \menamef\@ & \hspace{1cm} \merolef\@ & - \hspace{0.5cm} \meinstf\@} \\
+		\@ifundefined{meTitlef}{}{\meTitlef\@ & \meNamef\@ & \hspace{1cm} \meRolef\@ & - \hspace{0.5cm} \meInstf\@} \\
 		
-		\@ifundefined{metitleg}{}{\metitleg\@ & \menameg\@ & \hspace{1cm} \meroleg\@ & - \hspace{0.5cm} \meinstg\@} \\
+		\@ifundefined{meTitleg}{}{\meTitleg\@ & \meNameg\@ & \hspace{1cm} \meRoleg\@ & - \hspace{0.5cm} \meInstg\@} \\
 		
-		\@ifundefined{metitleh}{}{\metitleh\@ & \menameh\@ & \hspace{1cm} \meroleh\@ & - \hspace{0.5cm} \meinsth\@}
+		\@ifundefined{meTitleh}{}{\meTitleh\@ & \meNameh\@ & \hspace{1cm} \meRoleh\@ & - \hspace{0.5cm} \meInsth\@}
 	\end{tabular}
 }
 
