@@ -40,7 +40,7 @@
 
 %==============================================================================
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{ita}[2006/03/10 v2.0 Classe de documento com padrões do ITA]
+\ProvidesClass{itathesis}[2006/03/10 v2.0 Classe de documento com padrões do ITA]
 
 % % --------------------------------------------------------------------
 % %  Verificação se alvo será gerado pelo PDFLaTeX ou não

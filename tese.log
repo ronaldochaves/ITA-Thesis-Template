@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.28)  16 MAY 2020 05:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.28)  16 MAY 2020 06:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,8 +6,9 @@ entering extended mode
 (./tese.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 20 language(s) loaded.
-(./ita.cls
-Document Class: ita 2006/03/10 v2.0 Classe de documento com padrões do ITA
+(./itathesis.cls
+Document Class: itathesis 2006/03/10 v2.0 Classe de documento com padrões do IT
+A
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 ) (./defaults.def) (./msc.def) (/usr/share/texlive/texmf-dist/tex/latex/base/bo
@@ -1376,8 +1377,8 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
  ) 
 Here is how much of TeX's memory you used:
  14243 strings out of 494296
- 238517 string characters out of 6168574
- 348336 words of memory out of 5000000
+ 238553 string characters out of 6168574
+ 348372 words of memory out of 5000000
  17059 multiletter control sequences out of 15000+600000
  60503 words of font info for 113 fonts, out of 8000000 for 9000
  454 hyphenation exceptions out of 8191
